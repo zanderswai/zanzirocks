@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+@import '@porsche-design-system/components-react/tailwindcss';
+
+@theme {
+  --color-on-surface: #e5e2e1;
+  --color-primary-container: #d4af37;
+  --color-on-primary-container: #554300;
+  --color-surface-container-low: #1b1b1b;
+  --color-on-error-container: #ffdad6;
+  --color-surface-container-highest: #353535;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-secondary-container: #b08c10;
+  --color-on-surface-variant: #d0c5af;
+  --color-error: #ffb4ab;
+  --color-on-secondary-container: #352800;
+  --color-outline: #99907c;
+  --color-primary-fixed-dim: #e9c349;
+  --color-surface-tint: #e9c349;
+  --color-on-background: #e5e2e1;
+  --color-surface-dim: #131313;
+  --color-tertiary: #cfcecc;
+  --color-surface-container: #20201f;
+  --color-surface-bright: #393939;
+  --color-surface-variant: #353535;
+  --color-inverse-primary: #735c00;
+  --color-on-error: #690005;
+  --color-on-primary: #3c2f00;
+  --color-inverse-surface: #e5e2e1;
+  --color-surface: #131313;
+  --color-surface-container-high: #2a2a2a;
+  --color-on-secondary: #3d2f00;
+  --color-on-primary-fixed: #241a00;
+  --color-background: #131313;
+  --color-secondary-fixed: #ffe08b;
+  --color-primary-fixed: #ffe088;
+  --color-primary: #f2ca50;
+  --color-inverse-on-surface: #313030;
+  --color-error-container: #93000a;
+  --color-tertiary-container: #b3b3b1;
+  --color-secondary-fixed-dim: #eac249;
+  --color-outline-variant: #4d4635;
+  --color-secondary: #eac249;
+
+  --font-headline: 'El Messiri', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-label: 'Montserrat', sans-serif;
+  --font-handwritten: 'Reenie Beanie', cursive;
+
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.postcard-filter {
+  filter: grayscale(100%) sepia(20%) contrast(1.1);
+  transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.postcard-filter:hover {
+  filter: grayscale(0%) sepia(0%) contrast(1);
+}
+
+.text-shadow-hero {
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.text-stroke-primary {
+  -webkit-text-stroke: 1px #f2ca50;
+  color: transparent;
+}
+
+.editorial-image-mask {
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
