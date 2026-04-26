@@ -1,0 +1,1347 @@
+{
+  "meta": {
+    "project": "ZanziRocks",
+    "version": "1.0.0",
+    "generated": "2026-04-26",
+    "sourceFiles": [
+      "safari-packages.txt",
+      "3 Days Southern Safari.docx",
+      "3 Days Southern Safari.rtf",
+      "3 Days, Serenget & Ngorongoro.rtf",
+      "3Days 2Nights Selous Natinal Park from Dar es Salaam.docx",
+      "4days North..rtf",
+      "4DAYs SAFARIS.docx",
+      "5 days safari & 1 nights in Town on February 2019 (1).docx",
+      "5 days safari & 1 nights in Town on February 2019 (1).pdf",
+      "MAFIA PROGRAM.pdf",
+      "ZanziRocks - Tour packages Apr 05, 2026.pdf"
+    ],
+    "description": "Full website content architecture, UX sitemap, and structured package data for ZanziRocks. Extracted and synthesised from all available source documents."
+  },
+
+  "brand": {
+    "name": "ZanziRocks",
+    "legalName": "Wonderful Zanzibar Tours & Safaris",
+    "tagline": "Tanzania's Ultimate Adventure Awaits",
+    "subTagline": "From the Serengeti plains to coral island shores — all in one journey.",
+    "baseLocation": "Stone Town, Zanzibar, Tanzania",
+    "postalAddress": "Jaws Corner, Stone Town, P.O. Box 1477, Zanzibar, Tanzania",
+    "contact": {
+      "phone": ["+255 777 41 51 92", "+255 746 544 552", "+255 24 22 32 302"],
+      "whatsapp": "+255 777 41 51 92",
+      "email": "info@wonderfulzanzibar.co.tz",
+      "website": "www.wonderfulzanzibar.co.tz"
+    },
+    "tone": "bold, adventurous, warm, trustworthy, local expertise",
+    "targetAudience": [
+      "International leisure travellers (Europe, USA, Germany, UK)",
+      "Honeymoon & anniversary couples",
+      "Wildlife & photography enthusiasts",
+      "Adventure seekers",
+      "Dive & marine tourists",
+      "Group & family travellers"
+    ],
+    "USPs": [
+      "Fly-in safari experiences departing directly from Zanzibar",
+      "Full-board all-inclusive packages",
+      "Both Northern Circuit (Serengeti, Ngorongoro, Tarangire) & Southern Circuit (Nyerere/Selous)",
+      "Unique boat safaris on the Rufiji River",
+      "Whale shark snorkeling on Mafia Island",
+      "Maasai village cultural experiences",
+      "Expert English-speaking driver-guides",
+      "Private Land Cruiser / Land Rover with pop-up roof, window seat guaranteed",
+      "Flexible trip durations: 1 day to 6+ days"
+    ]
+  },
+
+  "destinations": [
+    {
+      "id": "zanzibar",
+      "name": "Zanzibar Island",
+      "type": "island_base",
+      "region": "coastal",
+      "coords": { "lat": -6.165, "lng": 39.202 },
+      "role": "departure hub for all packages",
+      "highlights": ["Stone Town UNESCO heritage", "beach resorts", "spice tours", "snorkeling", "sunset dhow cruises", "Jaws Corner"],
+      "heroTag": "Your Gateway to Everything",
+      "bestTime": "June–October (dry season), December–February"
+    },
+    {
+      "id": "nyerere",
+      "name": "Nyerere National Park",
+      "altName": "Selous Game Reserve",
+      "type": "safari",
+      "circuit": "southern",
+      "region": "south-central Tanzania",
+      "coords": { "lat": -9.6, "lng": 37.8 },
+      "airstrip": "Mtemere Airstrip",
+      "flightFromZanzibar": "~45–50 minutes",
+      "highlights": [
+        "Africa's largest national park",
+        "Rufiji River boat safari (hippos, crocodiles, birdlife)",
+        "Big game drives (elephants, lions, giraffes, buffalo)",
+        "Guided bush / walking safari with armed rangers",
+        "Maasai village cultural visit",
+        "Sandbank sunset watching"
+      ],
+      "wildlife": ["elephant", "lion", "giraffe", "buffalo", "hippo", "crocodile", "zebra", "impala", "warthog", "hyena"],
+      "lodges": ["Africa Safari Selous", "Ngalawa Lodge", "African Safari Lodge", "Selous Safari Lodge"],
+      "heroTag": "Africa's Largest National Park"
+    },
+    {
+      "id": "serengeti",
+      "name": "Serengeti National Park",
+      "type": "safari",
+      "circuit": "northern",
+      "region": "north-western Tanzania",
+      "coords": { "lat": -2.33, "lng": 34.83 },
+      "airstrip": "Seronera Airstrip (Central Serengeti)",
+      "highlights": [
+        "The Great Wildebeest Migration (Dec–Mar in Ndutu; July–Oct river crossings)",
+        "Seronera River wildlife corridor",
+        "Endless savannah plains",
+        "Big Five predators: lion, leopard, cheetah",
+        "Ndutu area — wildebeest calving & migration breeding (Dec–Mar)"
+      ],
+      "wildlife": ["lion", "leopard", "cheetah", "elephant", "wildebeest", "zebra", "giraffe", "rhino", "hippo", "flamingo"],
+      "lodges": ["Serengeti Safari Lodge", "Kumbukumbu Luxury Tented Camp", "Seronera Camping Site"],
+      "heroTag": "The Great Migration"
+    },
+    {
+      "id": "ngorongoro",
+      "name": "Ngorongoro Crater",
+      "type": "safari",
+      "circuit": "northern",
+      "region": "northern Tanzania",
+      "coords": { "lat": -3.18, "lng": 35.59 },
+      "highlights": [
+        "World's largest intact volcanic caldera (100 sq miles)",
+        "Highest density of Big Five in Africa",
+        "Permanent wildlife — no seasonal migration needed",
+        "Flamingos on crater lake",
+        "600m crater descent game drive",
+        "Maasai communities on crater rim"
+      ],
+      "wildlife": ["lion", "leopard", "rhino (rare)", "elephant", "buffalo", "flamingo", "hippo", "wildebeest", "zebra"],
+      "lodges": ["Ngorongoro Safari Lodge", "Simba Camping Lodge"],
+      "heroTag": "The World's Largest Intact Caldera"
+    },
+    {
+      "id": "tarangire",
+      "name": "Tarangire National Park",
+      "type": "safari",
+      "circuit": "northern",
+      "region": "northern Tanzania",
+      "coords": { "lat": -4.0, "lng": 36.0 },
+      "highlights": [
+        "Largest elephant herds in Tanzania",
+        "Iconic giant baobab trees",
+        "Tree pythons",
+        "Tarangire River as dry-season wildlife magnet",
+        "Dry-season Maasai steppe animal migration into the park"
+      ],
+      "wildlife": ["elephant (large herds)", "tree python", "buffalo", "giraffe", "zebra", "wildebeest", "impala", "lion"],
+      "lodges": ["Octagon Lodge (Karatu)"],
+      "heroTag": "Land of the Giants"
+    },
+    {
+      "id": "lake-manyara",
+      "name": "Lake Manyara",
+      "type": "safari",
+      "circuit": "northern",
+      "region": "northern Tanzania",
+      "coords": { "lat": -3.5, "lng": 35.83 },
+      "highlights": [
+        "Famous tree-climbing lions",
+        "Massive flamingo flocks on the lake",
+        "Rift Valley escarpment views",
+        "Dense groundwater forest",
+        "Excellent birdlife (500+ species)"
+      ],
+      "wildlife": ["tree-climbing lion", "flamingo", "elephant", "hippo", "giraffe", "buffalo"],
+      "lodges": ["Fig Tree Mini Lodge and Campsite"],
+      "heroTag": "The Jewel of the Rift Valley"
+    },
+    {
+      "id": "mafia-island",
+      "name": "Mafia Island",
+      "type": "island",
+      "circuit": "coastal",
+      "region": "southern Tanzanian coast",
+      "coords": { "lat": -7.9, "lng": 39.85 },
+      "airstrip": "Mafia Island Airport",
+      "flightFromZanzibar": "~50 minutes",
+      "highlights": [
+        "Whale shark snorkeling (world-class Oct–Feb season)",
+        "Pristine coral reefs & dive sites",
+        "Local BBQ on the shore",
+        "Kilindoni Town city tour",
+        "Marine Protected Area"
+      ],
+      "marine": ["whale shark", "manta ray", "hawksbill turtle", "reef fish", "coral gardens"],
+      "heroTag": "Swim With Giants"
+    },
+    {
+      "id": "arusha",
+      "name": "Arusha",
+      "type": "gateway_city",
+      "circuit": "northern",
+      "region": "northern Tanzania",
+      "coords": { "lat": -3.37, "lng": 36.68 },
+      "airport": "Kilimanjaro International Airport (JRO)",
+      "highlights": ["Safari operations base", "Kilimanjaro gateway", "Cultural markets", "Mt. Meru views"],
+      "heroTag": "Gateway to the Northern Circuit"
+    },
+    {
+      "id": "dar-es-salaam",
+      "name": "Dar es Salaam",
+      "type": "gateway_city",
+      "circuit": "southern",
+      "region": "coastal Tanzania",
+      "coords": { "lat": -6.79, "lng": 39.21 },
+      "role": "Road departure point for Selous/Nyerere (drive ~5hrs)",
+      "heroTag": "Southern Safari Gateway"
+    }
+  ],
+
+  "packages": [
+    {
+      "id": "nyerere-fly-in-3d",
+      "slug": "nyerere-fly-in-safari-3-days",
+      "title": "Nyerere National Park Fly-In Safari",
+      "subtitle": "3 Days / 2 Nights — The Ultimate Southern Wild Experience",
+      "duration": { "days": 3, "nights": 2 },
+      "type": "safari",
+      "circuit": "southern",
+      "departureMode": "fly-in from Zanzibar",
+      "departureBase": "Zanzibar",
+      "price": {
+        "from": 620,
+        "display": "From $620",
+        "currency": "USD",
+        "unit": "per person",
+        "notes": "Fly-in from Zanzibar version from $620/pp. Full program with boat safari + Maasai village."
+      },
+      "destinations": ["zanzibar", "nyerere"],
+      "highlights": [
+        "04:00 hotel pick-up → 06:00 fly to Mtemere Airstrip (45 min)",
+        "Full-day game drive in Nyerere National Park",
+        "Bush hamper breakfast & picnic lunch in the wild",
+        "2-hour boat safari on the Rufiji River (hippos, crocodiles)",
+        "Guided bush walk with armed rangers",
+        "Maasai village cultural visit",
+        "Stunning African sunset & bush dinner"
+      ],
+      "includes": [
+        "Return flights Zanzibar ↔ Mtemere",
+        "2 nights lodge accommodation (full board)",
+        "All game drives",
+        "Boat safari on Rufiji River",
+        "Guided walking safari",
+        "All park & conservation fees",
+        "Hotel transfers in Zanzibar"
+      ],
+      "excludes": ["Personal items", "Travel insurance", "Tips to guide"],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Journey Into the Wild",
+          "times": "04:00 pick-up → 06:00 flight → 07:00 arrive Mtemere",
+          "activities": ["First game drive safari", "Bush hamper breakfast in the wild", "Picnic lunch on game drive", "Late afternoon lodge check-in"],
+          "accommodation": "Africa Safari Selous",
+          "meals": "Lunch, Dinner"
+        },
+        {
+          "day": 2,
+          "title": "River, Wildlife & Culture",
+          "times": "Early morning start",
+          "activities": ["2-hour boat safari on Rufiji River (hippos, crocodiles, birds)", "Return to lodge for breakfast", "Guided bush walk (optional)", "Maasai village cultural visit", "Sunset dinner at lodge"],
+          "accommodation": "Africa Safari Selous",
+          "meals": "Breakfast, Lunch, Dinner"
+        },
+        {
+          "day": 3,
+          "title": "Final Safari & Return",
+          "times": "Early morning → 16:30 flight",
+          "activities": ["Early breakfast", "Final game drive", "Transfer to Mtemere Airstrip", "16:30 flight back to Zanzibar", "Hotel transfer on arrival"],
+          "meals": "Breakfast, Lunch"
+        }
+      ],
+      "lodges": ["Africa Safari Selous"],
+      "wildlife": ["elephant", "lion", "giraffe", "buffalo", "hippo", "crocodile", "birdlife"],
+      "badge": "Most Popular",
+      "seoTitle": "Nyerere National Park Fly-In Safari | 3 Days from Zanzibar | ZanziRocks",
+      "metaDescription": "Fly from Zanzibar to Nyerere National Park for 3 days of game drives, a Rufiji River boat safari, walking safari, and Maasai village visit. From $620/person."
+    },
+
+    {
+      "id": "nyerere-drive-dar-3d",
+      "slug": "nyerere-selous-safari-from-dar-3-days",
+      "title": "Nyerere Safari from Dar es Salaam",
+      "subtitle": "3 Days / 2 Nights — Classic Southern Drive Safari",
+      "duration": { "days": 3, "nights": 2 },
+      "type": "safari",
+      "circuit": "southern",
+      "departureMode": "road from Dar es Salaam",
+      "departureBase": "Dar es Salaam",
+      "price": {
+        "amount": 620,
+        "display": "$620",
+        "currency": "USD",
+        "unit": "per person"
+      },
+      "destinations": ["dar-es-salaam", "nyerere"],
+      "highlights": [
+        "08:00 depart Dar — 5-hour overland drive through untouched Tanzania",
+        "Afternoon boat safari (hippos, crocodiles at the sandbank)",
+        "Sunset watching at the Rufiji River sandbank",
+        "Full-day game drive (elephants, lions, zebras, hippos, crocodiles)",
+        "Early morning walking safari with armed rangers",
+        "Return drive to Dar — flight connection available"
+      ],
+      "includes": [
+        "2 nights accommodation (full board)",
+        "Jeep seat (4x4)",
+        "All game drives",
+        "Boat safari",
+        "Walking safari",
+        "All park fees"
+      ],
+      "excludes": ["Personal items", "Travel insurance", "Tips"],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Dar es Salaam to Selous",
+          "times": "08:00 depart → ~13:00 arrive",
+          "activities": ["5-hour scenic drive to Nyerere/Selous", "Lunch at Ngalawa Lodge", "16:00 boat safari on Rufiji River", "Sandbank sunset watching", "Dinner & overnight"],
+          "accommodation": "Ngalawa Lodge",
+          "meals": "Lunch, Dinner"
+        },
+        {
+          "day": 2,
+          "title": "Full-Day Game Drive",
+          "activities": ["Early breakfast", "Full-day game drive in Nyerere National Park", "Picnic lunch in the park (guide selects safe spot)", "17:30 return to lodge", "Dinner & overnight"],
+          "accommodation": "Ngalawa Lodge",
+          "meals": "Breakfast, Lunch, Dinner"
+        },
+        {
+          "day": 3,
+          "title": "Walking Safari & Return",
+          "times": "06:00 start → return to Dar",
+          "activities": ["06:00 walking safari with armed rangers", "09:00 return to lodge for breakfast", "Drive back to Dar es Salaam"],
+          "meals": "Breakfast"
+        }
+      ],
+      "lodges": ["Ngalawa Lodge"],
+      "wildlife": ["elephant", "lion", "giraffe", "zebra", "hippo", "crocodile", "impala", "warthog", "hyena"],
+      "badge": "Budget Value",
+      "seoTitle": "Selous Safari from Dar es Salaam | 3 Days | $620 | ZanziRocks",
+      "metaDescription": "Drive from Dar es Salaam into the heart of Nyerere National Park for 3 days of game drives, a Rufiji River boat safari, and a morning walking safari. $620/person."
+    },
+
+    {
+      "id": "southern-safari-zanzibar-3d",
+      "slug": "southern-safari-zanzibar-selous-3-days",
+      "title": "Southern Safari — Zanzibar to Selous",
+      "subtitle": "3 Days / 2 Nights — Via Dar es Salaam",
+      "duration": { "days": 3, "nights": 2 },
+      "type": "safari",
+      "circuit": "southern",
+      "departureMode": "fly Zanzibar → Dar, then road to Selous",
+      "departureBase": "Zanzibar",
+      "price": {
+        "amount": 1200,
+        "display": "$1,200",
+        "currency": "USD",
+        "unit": "per person"
+      },
+      "destinations": ["zanzibar", "dar-es-salaam", "nyerere"],
+      "highlights": [
+        "07:00 depart Dar — 5-hour road journey through untouched Tanzania",
+        "16:00 Boat safari — hippos and crocodiles in natural habitat",
+        "Full day game drive (buffaloes, lions, elephants, zebras, giraffes, impalas, warthogs, hippos, hyenas, crocodiles)",
+        "Early morning walking safari with armed rangers",
+        "Return flight to Zanzibar at 19:30"
+      ],
+      "includes": [
+        "Return flight Zanzibar ↔ Dar es Salaam (connection)",
+        "2 nights accommodation (full board)",
+        "Jeep seat (4x4)",
+        "All game drives",
+        "Boat safari",
+        "Walking safari",
+        "Park fees"
+      ],
+      "excludes": ["Personal items", "Travel insurance", "Tips"],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Dar es Salaam / Selous",
+          "times": "07:00 pickup → ~14:15 arrive Selous",
+          "activities": ["Drive to Selous Game Reserve (5 hrs)", "Lunch at lodge", "Relax", "16:00 boat safari (hippos, crocodiles)", "Dinner & overnight"],
+          "accommodation": "African Safari Lodge",
+          "meals": "Lunch, Dinner"
+        },
+        {
+          "day": 2,
+          "title": "Selous Full Game Drive",
+          "activities": ["Breakfast", "Full-day game drive (lions, elephants, buffaloes, zebras, giraffes, impalas, hyenas, crocodiles)", "Lunch in the park", "Return to lodge", "Dinner & overnight"],
+          "accommodation": "African Safari Lodge",
+          "meals": "Breakfast, Lunch, Dinner"
+        },
+        {
+          "day": 3,
+          "title": "Walking Safari & Zanzibar Return",
+          "times": "Early morning → 19:30 flight",
+          "activities": ["Early morning wilderness walking safari with armed rangers", "Breakfast at lodge", "Drive back to Dar es Salaam", "19:30 flight back to Zanzibar"],
+          "meals": "Breakfast, Lunch"
+        }
+      ],
+      "lodges": ["African Safari Lodge"],
+      "wildlife": ["buffalo", "lion", "elephant", "zebra", "giraffe", "impala", "warthog", "hippo", "hyena", "crocodile"],
+      "badge": "Southern Classic",
+      "seoTitle": "Southern Safari Zanzibar to Selous | 3 Days | $1,200 | ZanziRocks",
+      "metaDescription": "3-day southern circuit safari departing from Zanzibar via Dar es Salaam into Selous/Nyerere National Park. Game drives, boat safari, walking safari. $1,200/person."
+    },
+
+    {
+      "id": "serengeti-ngorongoro-fly-3d",
+      "slug": "serengeti-ngorongoro-safari-3-days",
+      "title": "Serengeti & Ngorongoro Safari",
+      "subtitle": "3 Days / 2 Nights — The Classic Northern Circuit Fly-In",
+      "duration": { "days": 3, "nights": 2 },
+      "type": "safari",
+      "circuit": "northern",
+      "departureMode": "fly-in from Zanzibar",
+      "departureBase": "Zanzibar",
+      "price": {
+        "amount": 1589,
+        "display": "$1,589",
+        "currency": "USD",
+        "unit": "per person"
+      },
+      "destinations": ["zanzibar", "serengeti", "ngorongoro"],
+      "highlights": [
+        "05:00 hotel pick-up → 08:00 direct flight to Central Serengeti (Seronera)",
+        "Full-day game drive in the majestic Serengeti",
+        "Sunrise & afternoon game drives",
+        "Optional Maasai village visit en route to Ngorongoro",
+        "Half-day descent 600m into Ngorongoro Crater",
+        "Luxury tented camp accommodation",
+        "20:30 flight back to Zanzibar"
+      ],
+      "includes": [
+        "Return flights Zanzibar ↔ Serengeti and Kilimanjaro ↔ Zanzibar",
+        "2 nights accommodation (full board)",
+        "All game drives",
+        "All park & conservation fees",
+        "Hotel transfers"
+      ],
+      "excludes": ["Personal items", "Travel insurance", "Tips", "Optional activities"],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Fly Into the Serengeti",
+          "times": "05:00 pick-up → 08:00 flight → Seronera",
+          "activities": ["08:00 fly to Seronera (Central Serengeti)", "Full-day game drive", "Picnic lunch on the plains", "Return to tented camp"],
+          "accommodation": "Kumbukumbu Luxury Tented Camp",
+          "meals": "Lunch, Dinner"
+        },
+        {
+          "day": 2,
+          "title": "Serengeti Plains to Karatu",
+          "activities": ["Sunrise game drive", "Full-day Serengeti game drive", "En-route to Karatu (optional Maasai village visit)", "Overnight in Karatu"],
+          "accommodation": "Peak Hotel Karatu",
+          "meals": "Breakfast, Lunch, Dinner"
+        },
+        {
+          "day": 3,
+          "title": "Ngorongoro Crater & Return",
+          "times": "Morning → 20:30 flight",
+          "activities": ["Half-day descent into Ngorongoro Crater game drive", "Lunch", "Transfer to Kilimanjaro Airport", "20:30 flight back to Zanzibar", "21:30 hotel transfer"],
+          "meals": "Breakfast, Lunch"
+        }
+      ],
+      "lodges": ["Kumbukumbu Luxury Tented Camp", "Peak Hotel Karatu"],
+      "wildlife": ["big five", "wildebeest", "zebra", "cheetah", "flamingo", "rhino"],
+      "badge": "Top Rated",
+      "seoTitle": "Serengeti & Ngorongoro Safari | 3 Days Fly-In from Zanzibar | $1,589 | ZanziRocks",
+      "metaDescription": "Fly from Zanzibar directly into the Serengeti for 3 days in the northern circuit. Full board, luxury tented camp accommodation. $1,589 per person."
+    },
+
+    {
+      "id": "tarangire-ngorongoro-manyara-3d",
+      "slug": "tarangire-ngorongoro-lake-manyara-3-days",
+      "title": "Tarangire, Ngorongoro & Lake Manyara",
+      "subtitle": "3 Days / 2 Nights — Northern Tanzania Triple Crown",
+      "duration": { "days": 3, "nights": 2 },
+      "type": "safari",
+      "circuit": "northern",
+      "departureMode": "fly-in from Zanzibar to Arusha",
+      "departureBase": "Zanzibar",
+      "price": {
+        "display": "On Request",
+        "currency": "USD",
+        "unit": "per person"
+      },
+      "destinations": ["zanzibar", "tarangire", "ngorongoro", "lake-manyara", "arusha"],
+      "highlights": [
+        "05:00 hotel transfer → 08:00 flight to Arusha",
+        "Full-day Tarangire game drive (elephant herds & baobab trees)",
+        "Full-day Ngorongoro Crater descent (big five)",
+        "Full-day Lake Manyara game drive (tree-climbing lions, flamingos)",
+        "3 parks in 3 days — maximum variety",
+        "20:30 flight back to Zanzibar"
+      ],
+      "includes": [
+        "Return flights Zanzibar ↔ Arusha",
+        "2 nights accommodation (full board)",
+        "All game drives (3 parks)",
+        "All park fees",
+        "Professional driver-guide",
+        "Hotel transfers"
+      ],
+      "excludes": ["Personal items", "Travel insurance", "Tips"],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Tarangire National Park",
+          "times": "05:00 transfer → 08:00 flight to Arusha",
+          "activities": ["Full-day Tarangire game drive", "Picnic lunch", "Evening at lodge"],
+          "accommodation": "Fig Tree Mini Lodge and Campsite",
+          "meals": "Lunch, Dinner"
+        },
+        {
+          "day": 2,
+          "title": "Ngorongoro Crater",
+          "activities": ["Early checkout", "Transfer to Ngorongoro", "Full-day crater descent (600m)", "Wildlife viewing: lion, rhino, elephant, flamingo", "Overnight"],
+          "accommodation": "Fig Tree Mini Lodge and Campsite",
+          "meals": "Breakfast, Lunch, Dinner"
+        },
+        {
+          "day": 3,
+          "title": "Lake Manyara & Return",
+          "times": "Day → 20:30 flight",
+          "activities": ["Full-day Lake Manyara game drive", "Tree-climbing lions & flamingos", "Transfer to Kilimanjaro Airport", "20:30 flight back to Zanzibar"],
+          "meals": "Breakfast, Lunch"
+        }
+      ],
+      "lodges": ["Fig Tree Mini Lodge and Campsite"],
+      "wildlife": ["elephant", "tree-climbing lion", "rhino", "flamingo", "buffalo", "giraffe", "zebra"],
+      "badge": "Best Variety",
+      "seoTitle": "Tarangire, Ngorongoro & Lake Manyara Safari | 3 Days from Zanzibar | ZanziRocks",
+      "metaDescription": "Explore three iconic northern Tanzania parks in 3 days: Tarangire's elephant herds, Ngorongoro Crater's big five, and Lake Manyara's tree-climbing lions."
+    },
+
+    {
+      "id": "northern-circuit-drive-3d",
+      "slug": "northern-circuit-drive-serengeti-ngorongoro-3-days",
+      "title": "Serengeti & Ngorongoro — Drive Safari",
+      "subtitle": "3 Days / 2 Nights — Arusha-Based Northern Circuit",
+      "duration": { "days": 3, "nights": 2 },
+      "type": "safari",
+      "circuit": "northern",
+      "departureMode": "road from Arusha",
+      "departureBase": "Arusha",
+      "price": {
+        "display": "On Request",
+        "currency": "USD",
+        "unit": "per person"
+      },
+      "destinations": ["arusha", "serengeti", "ngorongoro"],
+      "highlights": [
+        "05:00 depart Arusha",
+        "Drive through Karatu highlands & Ngorongoro Conservation Area",
+        "Arrive central Serengeti (Seronera) — full afternoon game drive",
+        "Sunrise game drive on the Serengeti plains",
+        "Maasai traditional cultural experience en route",
+        "Half-day Ngorongoro Crater descent",
+        "18% VAT on entrance fees included"
+      ],
+      "includes": [
+        "4x4 safari jeep with pop-up roof",
+        "Professional safari guide",
+        "2 nights accommodation (full board: camping or lodge)",
+        "Entrance fees to all national parks",
+        "Ngorongoro Crater fees",
+        "18% VAT on entrance fees",
+        "Government taxes & service charges"
+      ],
+      "excludes": ["Flights", "Personal items", "Travel insurance", "Tips"],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arusha to Central Serengeti",
+          "times": "05:00 depart",
+          "activities": ["Drive via Karatu highlands and NCA to Serengeti", "Afternoon game drive", "Picnic lunch", "Overnight Seronera"],
+          "accommodation": "Seronera Camping Site",
+          "meals": "Lunch, Dinner"
+        },
+        {
+          "day": 2,
+          "title": "Serengeti to Ngorongoro",
+          "activities": ["Sunrise game drive", "Breakfast at camp", "Full morning game drive", "En route to Ngorongoro — Maasai cultural visit", "Overnight Ngorongoro rim"],
+          "accommodation": "Simba Camping Lodge",
+          "meals": "Breakfast, Lunch, Dinner",
+          "notes": "Non game-viewing drive 4hrs, 145km"
+        },
+        {
+          "day": 3,
+          "title": "Ngorongoro Crater to Arusha",
+          "times": "08:30 crater descent",
+          "activities": ["Early breakfast", "Half-day descent into Ngorongoro Crater", "Picnic lunch", "Ascent from crater", "Return to Arusha"],
+          "meals": "Breakfast, Lunch"
+        }
+      ],
+      "lodges": ["Seronera Camping Site", "Simba Camping Lodge"],
+      "wildlife": ["big five", "wildebeest", "zebra", "cheetah", "flamingo", "rhino"],
+      "badge": "Adventure Pick"
+    },
+
+    {
+      "id": "northern-circuit-4d",
+      "slug": "northern-circuit-4-days-tarangire-serengeti-ngorongoro",
+      "title": "4-Day Northern Safari Circuit",
+      "subtitle": "4 Days / 3 Nights — Tarangire, Serengeti & Ngorongoro",
+      "duration": { "days": 4, "nights": 3 },
+      "type": "safari",
+      "circuit": "northern",
+      "departureMode": "fly-in from Zanzibar to Arusha",
+      "departureBase": "Zanzibar",
+      "price": {
+        "display": "On Request",
+        "currency": "USD",
+        "unit": "per person",
+        "notes": "Arusha road version also available"
+      },
+      "destinations": ["zanzibar", "tarangire", "serengeti", "ngorongoro", "arusha"],
+      "highlights": [
+        "Picked up at Arusha airport on arrival",
+        "Full-day Tarangire (elephant herds, tree pythons, giant baobabs)",
+        "Central Serengeti game drives (Seronera — most wildlife-rich area)",
+        "Maasai cultural experience & optional Olduvai Gorge visit",
+        "Half-day Ngorongoro Crater descent",
+        "Private Land Cruiser, pop-up roof, window seat guaranteed",
+        "Flight back to Zanzibar from Arusha"
+      ],
+      "includes": [
+        "Return flight Zanzibar ↔ Arusha",
+        "Private safari (4x4 Land Cruiser with pop-up roof)",
+        "3 nights accommodation (full board)",
+        "All game drives (3 parks)",
+        "Professional English-speaking driver-guide (+ camp cook for Serengeti)",
+        "All park & conservation fees",
+        "Government taxes & 18% VAT",
+        "Bottled water on safari",
+        "Unlimited mileage"
+      ],
+      "excludes": ["Personal items", "Travel insurance", "Tips to guide & cook", "Optional activities"],
+      "optionals": [
+        { "activity": "Hot air balloon ride over Serengeti", "price": "$540/person" },
+        { "activity": "Olduvai Gorge visit", "price": "$36/person" },
+        { "activity": "Maasai village visit", "price": "$60/vehicle" }
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Tarangire National Park",
+          "times": "Zanzibar → Arusha → 08:30 drive",
+          "activities": ["Picked up at Arusha airport", "Picnic lunch packed", "Full-day Tarangire game drive", "Evening at lodge"],
+          "accommodation": "Octagon Lodge (Karatu)",
+          "meals": "Lunch, Dinner",
+          "notes": "210km from Arusha, ~3hrs non-game drive"
+        },
+        {
+          "day": 2,
+          "title": "Tarangire to Central Serengeti",
+          "times": "08:30 depart",
+          "activities": ["Drive from Karatu to Serengeti via NCA highlands", "Arrive Seronera — full afternoon game drive", "Dinner at lodge"],
+          "accommodation": "Serengeti Safari Lodge (Seronera)",
+          "meals": "Breakfast, Lunch, Dinner"
+        },
+        {
+          "day": 3,
+          "title": "Serengeti to Ngorongoro",
+          "activities": ["Sunrise game drive", "Full morning Serengeti game drive", "En route to Ngorongoro (optional Maasai village + Olduvai Gorge)", "Overnight Ngorongoro rim"],
+          "accommodation": "Ngorongoro Safari Lodge",
+          "meals": "Breakfast, Lunch, Dinner",
+          "notes": "145km, ~4hrs non-game drive"
+        },
+        {
+          "day": 4,
+          "title": "Ngorongoro Crater & Arusha",
+          "times": "08:30 crater descent → Arusha → Zanzibar flight",
+          "activities": ["Early breakfast", "Half-day descent into Ngorongoro Crater (600m)", "Picnic lunch", "Ascent and drive back to Arusha Airport", "Flight back to Zanzibar"],
+          "meals": "Breakfast, Lunch"
+        }
+      ],
+      "lodges": ["Octagon Lodge (Karatu)", "Serengeti Safari Lodge", "Ngorongoro Safari Lodge"],
+      "wildlife": ["elephant", "lion", "leopard", "cheetah", "rhino", "buffalo", "zebra", "wildebeest", "flamingo", "giraffe"],
+      "badge": "Adventure Pick",
+      "seoTitle": "4-Day Northern Circuit Safari | Tarangire, Serengeti & Ngorongoro from Zanzibar | ZanziRocks",
+      "metaDescription": "4-day fly-in northern Tanzania safari covering Tarangire, Serengeti, and Ngorongoro Crater. Private Land Cruiser, full board, professional guide. Book from Zanzibar."
+    },
+
+    {
+      "id": "grand-safari-zanzibar-6d",
+      "slug": "grand-safari-zanzibar-6-days",
+      "title": "Grand Safari & Zanzibar Town",
+      "subtitle": "5 Days Safari + 1 Night in Town — The Complete Tanzania Experience",
+      "duration": { "days": 6, "nights": 5 },
+      "type": "combo",
+      "circuit": "northern",
+      "departureMode": "fly into Kilimanjaro International Airport",
+      "departureBase": "Kilimanjaro / International arrivals",
+      "price": {
+        "amount": 2555,
+        "display": "$2,555",
+        "currency": "USD",
+        "unit": "per person",
+        "notes": "2 persons sharing double room/tent"
+      },
+      "destinations": ["arusha", "tarangire", "serengeti", "ngorongoro", "zanzibar"],
+      "highlights": [
+        "Arrival Kilimanjaro International Airport (JRO)",
+        "Full-day Tarangire (tree pythons, giant baobabs, elephant herds)",
+        "South Serengeti game drives through the savannah",
+        "Ndutu area: Wildebeest migration calving grounds (Dec–Mar)",
+        "Ngorongoro Crater descent (100 sq miles, lions, leopard, rhino, elephant, buffalo)",
+        "Optional: Hot air balloon over the Serengeti ($500)",
+        "Optional: Olduvai Gorge ($36/person) & Maasai village ($60/vehicle)",
+        "1 night in Zanzibar Stone Town as a bonus",
+        "Private safari, window seat guaranteed"
+      ],
+      "includes": [
+        "Private safari",
+        "Arrival & departure Kilimanjaro airport transfers",
+        "Accommodation as indicated (2 persons sharing)",
+        "All indicated meals (B=Breakfast, L=Lunch, D=Dinner)",
+        "All park fees and government taxes",
+        "Professional English-speaking driver-guide",
+        "Land Rover or Land Cruiser with pop-up / flip-flop roof tops",
+        "Window seat guaranteed",
+        "Bottled water on safari",
+        "Unlimited mileage"
+      ],
+      "excludes": [
+        "International airfare (from/to home country)",
+        "Personal items (passport, visa, travel insurance)",
+        "Tips to driver-guide",
+        "Extra/optional activities"
+      ],
+      "optionals": [
+        { "activity": "Hot air balloon ride over Serengeti", "price": "$500/person" },
+        { "activity": "Olduvai Gorge visit", "price": "$36/person" },
+        { "activity": "Maasai village visit", "price": "$60/vehicle" }
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival in Arusha",
+          "activities": ["Arrive Kilimanjaro International Airport (JRO)", "Transfer to hotel in Arusha"],
+          "accommodation": "Arusha Planet Lodge",
+          "meals": "Breakfast, Bed"
+        },
+        {
+          "day": 2,
+          "title": "Tarangire National Park",
+          "activities": ["Depart Simba Farm Lodge", "Picnic lunch packed", "Full-day Tarangire game drive", "Elephant herds, baobabs, tree pythons"],
+          "accommodation": "Octagon Lodge",
+          "meals": "Lunch, Dinner",
+          "notes": "4hrs one-way drive"
+        },
+        {
+          "day": 3,
+          "title": "South Serengeti",
+          "activities": ["Breakfast & depart for south Serengeti", "On-route game drive", "Afternoon predator game drives"],
+          "accommodation": "Serengeti Safari Lodge",
+          "meals": "Breakfast, Lunch, Dinner",
+          "notes": "~4-6hrs drive"
+        },
+        {
+          "day": 4,
+          "title": "Ndutu — Wildebeest Migration",
+          "activities": ["Full-day Ndutu area game drive", "Wildebeest migration calving & breeding site (Dec–Mar)", "Millions of wildebeest, zebra, other ungulates"],
+          "accommodation": "Serengeti Safari Lodge",
+          "meals": "Breakfast, Lunch, Dinner"
+        },
+        {
+          "day": 5,
+          "title": "Ngorongoro Crater",
+          "activities": ["Drive to Ngorongoro", "Optional Maasai village visit", "Optional Olduvai Gorge visit", "Dinner & overnight on crater rim"],
+          "accommodation": "Ngorongoro Safari Lodge",
+          "meals": "Breakfast, Lunch, Dinner",
+          "notes": "~2hrs drive from Serengeti"
+        },
+        {
+          "day": 6,
+          "title": "Crater Game Drive & Zanzibar Return",
+          "activities": ["Early breakfast", "Descend into Ngorongoro Crater", "Half-day game drive (lions, leopard, rhino, elephant, buffalo, flamingo)", "Drive back to Arusha", "Flight to Zanzibar", "Hotel transfer in Zanzibar"],
+          "accommodation": "Zanzibar hotel",
+          "meals": "Breakfast, Lunch"
+        }
+      ],
+      "lodges": ["Arusha Planet Lodge", "Octagon Lodge", "Serengeti Safari Lodge", "Ngorongoro Safari Lodge"],
+      "wildlife": ["elephant", "lion", "leopard", "cheetah", "rhino", "buffalo", "wildebeest migration", "zebra", "flamingo", "giraffe"],
+      "badge": "Premium Experience",
+      "seoTitle": "Grand Tanzania Safari & Zanzibar | 6 Days | $2,555/person | ZanziRocks",
+      "metaDescription": "The ultimate Tanzania journey: 5-day northern circuit safari (Tarangire, Serengeti wildebeest migration, Ngorongoro) plus 1 night Zanzibar Stone Town. $2,555/person."
+    },
+
+    {
+      "id": "mafia-whale-shark-day",
+      "slug": "mafia-island-whale-shark-adventure-day-trip",
+      "title": "Mafia Island Whale Shark Adventure",
+      "subtitle": "Day Trip — Fly from Zanzibar & Swim With Giants",
+      "duration": { "days": 1, "nights": 0 },
+      "type": "island_day_trip",
+      "circuit": "coastal",
+      "departureMode": "fly-in from Zanzibar",
+      "departureBase": "Zanzibar",
+      "price": {
+        "adult": 550,
+        "child": 450,
+        "display": "$550 adults / $450 children",
+        "currency": "USD",
+        "unit": "per person",
+        "childDefinition": "Children 12 years and below",
+        "notes": "Rates valid till June 2024 per original document — confirm current pricing"
+      },
+      "packageCode": "EEAD1",
+      "destinations": ["zanzibar", "mafia-island"],
+      "highlights": [
+        "~50-minute scenic morning flight Zanzibar → Mafia Island",
+        "Met & greeted by team on arrival",
+        "Briefing then boat to search for whale sharks",
+        "Snorkel alongside whale sharks (world's largest fish)",
+        "Return to base for local BBQ lunch by the shore",
+        "Kilindoni City Tour (Mafia Island town, time permitting)",
+        "Return flight to Zanzibar",
+        "Hotel transfer on return"
+      ],
+      "includes": [
+        "Complimentary return hotel transfers from Zanzibar",
+        "Return flights Zanzibar ↔ Mafia Island",
+        "Mafia Airport return transfers",
+        "Whale shark boat adventure",
+        "Complimentary Kilindoni City Tour",
+        "BBQ lunch, snacks, and soft drinks",
+        "Snorkeling gear",
+        "Conservation fees",
+        "All taxes & VAT"
+      ],
+      "excludes": [
+        "Personal items (travel insurance, visa fees)",
+        "Any other activities not listed above"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Mafia Whale Shark Day",
+          "activities": [
+            "Morning hotel pick-up in Zanzibar",
+            "~50-minute flight to Mafia Island",
+            "Met & greeted — transfer to excursion base",
+            "Briefing at whale shark base",
+            "Local boat to search for whale sharks",
+            "Snorkel with whale sharks in open water",
+            "BBQ lunch, snacks & soft drinks at base",
+            "Kilindoni City Tour (time permitting)",
+            "Transfer to Mafia Airport",
+            "Return flight to Zanzibar",
+            "Hotel transfer on arrival"
+          ],
+          "meals": "Lunch, snacks"
+        }
+      ],
+      "badge": "Bucket List",
+      "seoTitle": "Mafia Island Whale Shark Snorkeling Day Trip from Zanzibar | ZanziRocks",
+      "metaDescription": "Day trip from Zanzibar to Mafia Island for whale shark snorkeling. BBQ lunch, city tour, return flights all included. $550/adult, $450/child."
+    }
+  ],
+
+  "sitemap": {
+    "pages": [
+      {
+        "path": "/",
+        "id": "landing",
+        "title": "ZanziRocks | Tanzania Safaris & Island Adventures from Zanzibar",
+        "type": "landing",
+        "priority": "CRITICAL",
+        "conversionGoal": "Package enquiry / WhatsApp contact / booking",
+        "sections": [
+          {
+            "id": "hero",
+            "name": "Hero",
+            "type": "fullscreen-video-or-image-hero",
+            "content": {
+              "headline": "One Island. Infinite Wild.",
+              "subheadline": "You came to Zanzibar for the beach. But the Serengeti is 45 minutes away. Whale sharks are circling off Mafia Island. And the greatest wildlife spectacle on earth is closer than you think. We'll take you there.",
+              "cta_primary": { "label": "Explore Packages", "href": "/packages" },
+              "cta_secondary": { "label": "WhatsApp Our Team", "href": "https://wa.me/255777415192" },
+              "backgroundMedia": "Autoplay muted video — cinematic: wildlife game drive, Zanzibar beach, boat safari on Rufiji",
+              "trustBadge": "★★★★★  500+ Adventures. Zero Regrets."
+            },
+            "ux_notes": "Full viewport height. Autoplay video (muted, loop). Both CTAs must be above fold. Warm amber overlay to give cinematic feel. Mobile: use static hero image for performance."
+          },
+          {
+            "id": "trust-bar",
+            "name": "Trust / Stats Bar",
+            "type": "icon-stat-row",
+            "content": {
+              "stats": [
+                { "icon": "jeep", "value": "500+", "label": "Adventures Launched" },
+                { "icon": "star", "value": "4.9★", "label": "Guest Rating" },
+                { "icon": "map-pin", "value": "9", "label": "Wild Destinations" },
+                { "icon": "clock", "value": "1–6 Days", "label": "Trips That Fit Your Schedule" },
+                { "icon": "plane", "value": "Fly-In", "label": "Direct from Zanzibar" }
+              ]
+            },
+            "ux_notes": "Slim horizontal strip directly below hero fold. High-contrast dark background or brand amber. Builds instant trust before user scrolls."
+          },
+          {
+            "id": "featured-packages",
+            "name": "Featured Packages",
+            "type": "card-grid",
+            "content": {
+              "heading": "Pick Your Wild",
+              "subheading": "Forty-five minutes from Zanzibar Airport, a lion could be staring back at you through the dust. A herd of elephants could be crossing your path. Choose how deep into Tanzania you want to go.",
+              "filter_tabs": ["All", "Safaris", "Island Trips", "Day Trips", "Budget", "Premium"],
+              "featured_ids": ["nyerere-fly-in-3d", "serengeti-ngorongoro-fly-3d", "mafia-whale-shark-day"],
+              "card_elements": ["hero photo", "badge", "title", "duration badge", "price from", "top 3 highlights", "Book Now CTA"]
+            },
+            "ux_notes": "3-column grid desktop, carousel mobile. Hover reveals full highlight list. 'View All Packages' link below. Each card shows price upfront — critical for conversion."
+          },
+          {
+            "id": "destinations-map",
+            "name": "Interactive Tanzania Destinations Map",
+            "type": "interactive-svg-map",
+            "content": {
+              "heading": "Tanzania, All in One Place",
+              "subheading": "Nine extraordinary destinations — one team, rooted in Stone Town, to take you to every single one. Tap to explore.",
+              "mapBase": "SVG outline of Tanzania country shape",
+              "destinations": [
+                { "id": "zanzibar", "label": "Zanzibar", "type": "island", "pulsing": true },
+                { "id": "nyerere", "label": "Nyerere / Selous", "type": "safari", "pulsing": true },
+                { "id": "serengeti", "label": "Serengeti", "type": "safari", "pulsing": true },
+                { "id": "ngorongoro", "label": "Ngorongoro", "type": "safari", "pulsing": true },
+                { "id": "tarangire", "label": "Tarangire", "type": "safari", "pulsing": true },
+                { "id": "lake-manyara", "label": "Lake Manyara", "type": "safari", "pulsing": true },
+                { "id": "mafia-island", "label": "Mafia Island", "type": "island", "pulsing": true },
+                { "id": "arusha", "label": "Arusha", "type": "gateway", "pulsing": false }
+              ],
+              "pin_style": "CSS keyframe pulsing circles (safari = amber, island = blue)",
+              "tooltip_content": ["destination name", "hero tag", "top highlights", "'See Packages' CTA button"]
+            },
+            "ux_notes": "SVG map with clickable pulsing dots. Desktop: large map with inline tooltips. Mobile: scrollable destination card strip below map. No Google Maps API required."
+          },
+          {
+            "id": "how-it-works",
+            "name": "How It Works",
+            "type": "steps-section",
+            "content": {
+              "heading": "From Your Zanzibar Hotel to the Heart of Africa — in 3 Steps",
+              "steps": [
+                { "step": 1, "icon": "compass", "title": "Pick Your Adventure", "desc": "Browse fly-in safaris, southern circuit expeditions, and island day trips. Every package is designed for travellers already in Zanzibar — no detours, no wasted time." },
+                { "step": 2, "icon": "calendar", "title": "We Handle Every Detail", "desc": "Flights, park permits, lodges, expert guides, all meals. Our Stone Town team coordinates everything from the moment you say yes. You just pack your camera." },
+                { "step": 3, "icon": "binoculars", "title": "Live Something Unforgettable", "desc": "Your private Land Cruiser rolls out at sunrise. Your guide knows exactly where the lions slept last night. This is Tanzania as it was meant to be discovered." }
+              ]
+            },
+            "ux_notes": "Light-background section (visual break). Large step numbers. Clean icon row. Brief — 3 steps max."
+          },
+          {
+            "id": "testimonials",
+            "name": "Testimonials & Social Proof",
+            "type": "review-carousel",
+            "content": {
+              "heading": "You Don't Have to Take Our Word for It",
+              "subheading": "Over 500 travellers have made the leap from beach to bush. Here's what they came back saying.",
+              "sources": {
+                "trustpilot": {
+                  "widgetType": "TrustBox Micro Review Count or Carousel",
+                  "setupNote": "Requires TrustPilot Business account at trustpilot.com. Embed via TrustBox script.",
+                  "fallback": "Manual star-rated review cards (see below)"
+                },
+                "google": {
+                  "widgetType": "Google Reviews via Elfsight or EmbedSocial widget",
+                  "setupNote": "Requires Google Business Profile verified for ZanziRocks / Wonderful Zanzibar."
+                },
+                "instagram": {
+                  "widgetType": "Photo feed via Curator.io or Elfsight Instagram Feed",
+                  "setupNote": "Requires Instagram Business account @zanzirocks or similar. Shows UGC travel photos.",
+                  "displayCount": 9,
+                  "layout": "3x3 grid or masonry"
+                }
+              },
+              "manualFallbackReviews": [
+                { "name": "Sarah M.", "country": "UK 🇬🇧", "rating": 5, "package": "Serengeti & Ngorongoro Safari", "text": "I'd been to Africa three times before. This was the first time I forgot to check my phone for three whole days. Our guide read the land like a story — every track, every rustle meant something." },
+                { "name": "James K.", "country": "USA 🇺🇸", "rating": 5, "package": "Nyerere Fly-In Safari", "text": "I woke up at 5am not because of an alarm — but because something enormous was moving just outside my tent. That sound. That morning. That's the ZanziRocks difference." },
+                { "name": "Anna L.", "country": "Germany 🇩🇪", "rating": 5, "package": "Mafia Island Whale Shark Day Trip", "text": "The whale shark was the length of a school bus and I was in the water alongside it. I've dived across three oceans. Nothing has come close to that moment." }
+              ]
+            },
+            "ux_notes": "Auto-scrolling carousel. Show star ratings prominently. Show total review count. 'Read all reviews' CTA links to TrustPilot page. Mobile: swipeable cards."
+          },
+          {
+            "id": "instagram-gallery",
+            "name": "Life in the Wild — Photo Gallery",
+            "type": "ugc-masonry-grid",
+            "content": {
+              "heading": "The Moments Between the Photos",
+              "subheading": "Shot by real travellers, on real ZanziRocks adventures. No filters, no staging — just Tanzania doing what it does.",
+              "handle": "@zanzirocks",
+              "integration": "Elfsight Instagram Feed or Curator.io",
+              "count": 9,
+              "layout": "3-column masonry"
+            },
+            "ux_notes": "Hover overlay shows heart count. Clicking opens Instagram. Mobile: 2-column grid. CTA: 'Follow @zanzirocks' button."
+          },
+          {
+            "id": "cta-banner",
+            "name": "Final CTA Banner",
+            "type": "full-width-cta",
+            "content": {
+              "headline": "The Wild Won't Wait.",
+              "subheadline": "The Great Migration, whale shark season, the Big Five inside the crater — Tanzania's greatest moments are tied to the calendar. Tell us when you're here. Our Stone Town team will build the adventure around it.",
+              "cta_primary": { "label": "Plan My Safari Today", "href": "/contact/booking" },
+              "cta_secondary": { "label": "WhatsApp Our Team", "href": "https://wa.me/255777415192" },
+              "background": "Full-width dramatic African landscape (sunset, Serengeti horizon, or Rufiji boat)"
+            },
+            "ux_notes": "High contrast design. Large typography. Just 2 CTAs. One section before footer. Should feel cinematic and urgent."
+          },
+          {
+            "id": "newsletter",
+            "name": "Newsletter Signup",
+            "type": "email-capture",
+            "content": {
+              "headline": "Stay Ahead of the Wild",
+              "subheading": "Migration windows. Whale shark season alerts. Flash deals on fly-in packages. Straight to your inbox — before they sell out.",
+              "fields": ["email"],
+              "cta": "Send Me the Guide",
+              "incentive": "Sign up and receive your free Tanzania Safari Planning Guide — 28 pages of insider knowledge straight from our Stone Town team.",
+              "gdpr": "GDPR consent checkbox required"
+            },
+            "ux_notes": "Subtle minimal section above footer. No more than 1 field for low friction. Connect to Mailchimp or HubSpot list."
+          }
+        ]
+      },
+
+      {
+        "path": "/packages",
+        "id": "packages-index",
+        "title": "All Tanzania Packages | ZanziRocks",
+        "type": "listing",
+        "priority": "HIGH",
+        "sections": [
+          { "id": "hero", "content": { "headline": "Explore Our Packages", "subheadline": "Fly-in safaris, southern circuits, island adventures & day trips" } },
+          { "id": "filters", "content": { "filters": ["All", "Safari", "Island", "Day Trips", "1-3 Days", "4-5 Days", "6+ Days", "Under $1,000", "$1,000–$2,000", "$2,000+"], "sort": ["Most Popular", "Price Low→High", "Price High→Low", "Duration"] } },
+          { "id": "package-grid", "content": { "allPackages": true, "layout": "3-col grid (desktop) → 2-col (tablet) → 1-col (mobile)" } }
+        ]
+      },
+
+      {
+        "path": "/packages/:slug",
+        "id": "package-detail",
+        "title": "[Package Name] | ZanziRocks",
+        "type": "detail",
+        "priority": "HIGH",
+        "stickyElement": "Booking/Enquiry widget (price + dates + group size) sticky on scroll",
+        "sections": [
+          { "id": "gallery", "name": "Photo Gallery", "content": "Full-width hero photo + 4-thumbnail photo strip" },
+          { "id": "overview", "name": "Overview", "content": "Title, duration, price, top highlights, quick-facts row (circuit, transport, meals), sticky booking widget" },
+          { "id": "itinerary", "name": "Day-by-Day Itinerary", "content": "Accordion or vertical timeline. Each day: title, summary, activities, accommodation, meals" },
+          { "id": "includes", "name": "What's Included / Excluded", "content": "Two-column checklist with green ticks (included) and red crosses (excluded)" },
+          { "id": "optionals", "name": "Optional Add-Ons", "content": "Card list with price per item (balloon ride, Olduvai Gorge, Maasai village)" },
+          { "id": "route-map", "name": "Route Map", "content": "Small SVG Tanzania map highlighting destinations visited on this package" },
+          { "id": "wildlife", "name": "Wildlife You May See", "content": "Icon grid of wildlife species with illustrations" },
+          { "id": "lodges", "name": "Accommodation", "content": "Lodge cards: name, photo, brief description, meal plan" },
+          { "id": "booking-form", "name": "Booking / Enquiry Form", "content": "Fields: Full Name, Email, Phone / WhatsApp, Preferred Travel Dates, Group Size, Special Requests. Handler: Formspree or custom API. WhatsApp shortcut button." },
+          { "id": "related", "name": "You Might Also Like", "content": "2–3 related package cards" }
+        ]
+      },
+
+      {
+        "path": "/destinations",
+        "id": "destinations-index",
+        "title": "Tanzania Destinations | ZanziRocks",
+        "type": "listing",
+        "priority": "HIGH",
+        "sections": [
+          { "id": "map-hero", "name": "Interactive Map Hero", "content": "Large SVG Tanzania map with pulsing pins for all 9 destinations" },
+          { "id": "destination-cards", "name": "Destination Cards Grid", "content": "Full-bleed photo cards. Each: hero image, destination name, hero tag, brief 1-line description, 'Explore' CTA" }
+        ]
+      },
+
+      {
+        "path": "/destinations/:id",
+        "id": "destination-detail",
+        "title": "[Destination] | ZanziRocks",
+        "type": "detail",
+        "priority": "MEDIUM",
+        "sections": [
+          { "id": "hero", "content": "Full-screen landscape photo, destination name, quick-facts: region, best time to visit, distance from Zanzibar, flight time" },
+          { "id": "overview", "content": "Rich 300-400 word destination description — why visit, what's unique, signature experience" },
+          { "id": "highlights", "content": "Icon bullet list of top 5–7 experiences" },
+          { "id": "wildlife", "content": "Safari destinations: animal icon grid. Island destinations: marine species grid" },
+          { "id": "best-time", "content": "Month-by-month calendar showing dry/wet/migration seasons" },
+          { "id": "packages", "content": "Card row: all packages that include this destination" }
+        ]
+      },
+
+      {
+        "path": "/about",
+        "id": "about",
+        "title": "About ZanziRocks | Our Story & Team",
+        "type": "content",
+        "priority": "MEDIUM",
+        "sections": [
+          { "id": "story", "content": "Brand narrative — local roots in Zanzibar Stone Town, mission, founding story" },
+          { "id": "values", "content": "Responsible tourism, wildlife conservation, community investment, authentic local experiences" },
+          { "id": "team", "content": "Photo cards for key guides and staff with name, role, years experience" },
+          { "id": "certifications", "content": "TATO, Tanzania Tourism Board, TripAdvisor certificate logos" }
+        ]
+      },
+
+      {
+        "path": "/contact",
+        "id": "contact",
+        "title": "Contact ZanziRocks | Plan Your Safari",
+        "type": "contact",
+        "priority": "HIGH",
+        "sections": [
+          {
+            "id": "enquiry-form",
+            "content": {
+              "fields": ["Full Name", "Email", "Phone / WhatsApp", "Preferred Dates", "Number of Adults", "Number of Children", "Package(s) of Interest (multi-select)", "Message / Special Requests"],
+              "handler": "Formspree, Netlify Forms, or custom API",
+              "gdpr": "Consent checkbox required"
+            }
+          },
+          {
+            "id": "contact-info",
+            "content": {
+              "phone": "+255 777 41 51 92",
+              "whatsapp": "+255 777 41 51 92",
+              "email": "info@wonderfulzanzibar.co.tz",
+              "address": "Jaws Corner, Stone Town, P.O. Box 1477, Zanzibar, Tanzania",
+              "mapEmbed": "Google Maps embed of Stone Town, Zanzibar"
+            }
+          },
+          {
+            "id": "faq",
+            "content": {
+              "questions": [
+                "What is the best time to visit Tanzania?",
+                "Are the packages suitable for children?",
+                "What is included in 'full board'?",
+                "How do I get from Zanzibar to the safari parks?",
+                "Do you offer private / custom safaris?",
+                "What should I pack for a safari?",
+                "Is travel insurance required?",
+                "What payment methods do you accept?"
+              ]
+            }
+          }
+        ]
+      },
+
+      {
+        "path": "/blog",
+        "id": "blog",
+        "title": "Tanzania Safari Blog | ZanziRocks",
+        "type": "blog",
+        "priority": "LOW",
+        "seoTargetKeywords": [
+          "best time to visit Serengeti",
+          "whale sharks Mafia Island Tanzania",
+          "Zanzibar safari packages",
+          "Ngorongoro crater tips",
+          "wildebeest migration Tanzania 2026",
+          "what to pack for Tanzania safari",
+          "Nyerere vs Serengeti which is better",
+          "Tanzania fly-in safari from Zanzibar"
+        ],
+        "sections": [
+          { "id": "blog-grid", "content": "Filterable grid by category: Safari Tips, Wildlife, Destinations, Planning, Culture" }
+        ]
+      }
+    ]
+  },
+
+  "navigation": {
+    "topBar": {
+      "left": "📞 +255 777 41 51 92",
+      "right": "💬 WhatsApp: +255 777 41 51 92"
+    },
+    "primary": [
+      {
+        "label": "Packages",
+        "href": "/packages",
+        "megaMenu": [
+          { "label": "All Packages", "href": "/packages" },
+          { "label": "Southern Safari (Nyerere/Selous)", "href": "/packages/southern-circuit" },
+          { "label": "Northern Safari (Serengeti & More)", "href": "/packages/northern-circuit" },
+          { "label": "Mafia Island Day Trip", "href": "/packages/mafia-island-whale-shark-adventure-day-trip" },
+          { "label": "Grand Safari (6 Days)", "href": "/packages/grand-safari-zanzibar-6-days" }
+        ]
+      },
+      {
+        "label": "Destinations",
+        "href": "/destinations",
+        "megaMenu": [
+          { "label": "Zanzibar", "href": "/destinations/zanzibar" },
+          { "label": "Nyerere / Selous", "href": "/destinations/nyerere" },
+          { "label": "Serengeti", "href": "/destinations/serengeti" },
+          { "label": "Ngorongoro Crater", "href": "/destinations/ngorongoro" },
+          { "label": "Tarangire", "href": "/destinations/tarangire" },
+          { "label": "Lake Manyara", "href": "/destinations/lake-manyara" },
+          { "label": "Mafia Island", "href": "/destinations/mafia-island" }
+        ]
+      },
+      { "label": "About", "href": "/about" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "cta": { "label": "Book Now", "href": "/contact/booking", "style": "primary-button" },
+    "floating": {
+      "type": "WhatsApp Chat Button",
+      "position": "bottom-right",
+      "href": "https://wa.me/255777415192",
+      "message": "Hi! I'd like to know more about your Tanzania safari packages.",
+      "visibility": "always visible on all pages"
+    }
+  },
+
+  "footer": {
+    "columns": [
+      {
+        "heading": "ZanziRocks",
+        "items": ["About Us", "Our Story", "Meet the Team", "Contact Us", "Privacy Policy", "Terms & Conditions"]
+      },
+      {
+        "heading": "Packages",
+        "items": [
+          "Nyerere Fly-In Safari (3 Days)",
+          "Nyerere from Dar (3 Days)",
+          "Southern Safari Zanzibar (3 Days)",
+          "Serengeti & Ngorongoro (3 Days)",
+          "Tarangire Triple Crown (3 Days)",
+          "4-Day Northern Circuit",
+          "Grand Safari (6 Days)",
+          "Mafia Whale Shark Day Trip"
+        ]
+      },
+      {
+        "heading": "Destinations",
+        "items": ["Zanzibar", "Nyerere / Selous", "Serengeti", "Ngorongoro", "Tarangire", "Lake Manyara", "Mafia Island", "Arusha"]
+      },
+      {
+        "heading": "Connect",
+        "items": ["Instagram", "Facebook", "TripAdvisor", "WhatsApp", "TrustPilot"]
+      }
+    ],
+    "trustLogos": ["TrustPilot rating badge", "Tanzania Tourism Board", "TATO (Tanzania Association of Tour Operators)"],
+    "copyright": "© 2026 ZanziRocks / Wonderful Zanzibar Tours & Safaris. All rights reserved."
+  },
+
+  "seo": {
+    "primaryKeywords": [
+      "Tanzania safari packages from Zanzibar",
+      "fly-in safari Zanzibar",
+      "Serengeti safari tours",
+      "Ngorongoro crater tours",
+      "Nyerere National Park safari",
+      "Selous Game Reserve safari",
+      "whale shark Mafia Island Tanzania",
+      "wildebeest migration safari 2026",
+      "Zanzibar safari holiday",
+      "Tanzania northern circuit fly-in"
+    ],
+    "structuredDataTypes": ["Organization", "TouristTrip", "TouristDestination", "LocalBusiness", "FAQPage", "BreadcrumbList"],
+    "ogDefaults": { "type": "website", "locale": "en_US", "twitterCard": "summary_large_image" }
+  },
+
+  "integrations": {
+    "booking": {
+      "model": "Enquiry → email/WhatsApp → manual confirmation → deposit invoice",
+      "formHandler": "Formspree (simple) or Netlify Forms or custom API route",
+      "whatsappCTA": true,
+      "phoneCTA": true,
+      "autoReply": "Send automated confirmation email on form submission"
+    },
+    "analytics": ["Google Analytics 4", "Meta Pixel (optional for ad retargeting)"],
+    "emailMarketing": "Mailchimp or HubSpot — newsletter list + post-booking follow-up sequence",
+    "reviews": {
+      "trustpilot": {
+        "requirement": "TrustPilot Business Account",
+        "widgetOptions": ["TrustBox Micro Review Count", "TrustBox Carousel", "TrustBox Grid"],
+        "embedMethod": "Script tag from TrustPilot dashboard"
+      },
+      "google": {
+        "requirement": "Verified Google Business Profile",
+        "widgetOptions": ["Elfsight Google Reviews", "EmbedSocial", "ReviewsOnMyWebsite"]
+      },
+      "instagram": {
+        "requirement": "Instagram Business Account",
+        "widgetOptions": ["Elfsight Instagram Feed", "Curator.io", "Juicer.io"],
+        "apiMethod": "Instagram Basic Display API (if self-hosted)"
+      }
+    },
+    "map": {
+      "destinationsMap": "Custom SVG Tanzania outline + CSS animated pulsing pins. No API key needed.",
+      "contactPageMap": "Google Maps embed (static or JS SDK)"
+    },
+    "chat": "WhatsApp Business API floating button (tawk.to or Tidio as alternative)"
+  },
+
+  "techStack": {
+    "recommended": {
+      "framework": "Next.js 14 (App Router) — SSR + image optimization + SEO",
+      "styling": "Tailwind CSS",
+      "cms": "Sanity.io (for packages and blog content management by non-devs)",
+      "hosting": "Vercel or Netlify",
+      "images": "Cloudinary CDN or Next.js built-in Image",
+      "forms": "Formspree (fast setup) or React Hook Form + API route",
+      "fonts": "Playfair Display (display) + DM Sans (body) — from Google Fonts"
+    },
+    "performanceNotes": "Prioritise mobile. Tanzania users are often on 3G/4G — use lazy loading, WebP images only, and code-split aggressively. Target < 2s LCP on mobile."
+  },
+
+  "designTokens": {
+    "colorPalette": {
+      "primary": "#C8651B",
+      "primaryDark": "#9E4E14",
+      "accent": "#F2A341",
+      "dark": "#1A1208",
+      "earth": "#6B4C2A",
+      "sage": "#5A7A4A",
+      "sky": "#2E7BAE",
+      "cream": "#FDF5E6",
+      "white": "#FFFFFF"
+    },
+    "typography": {
+      "display": "Playfair Display or Cormorant Garamond (luxury editorial, headlines)",
+      "body": "DM Sans or Source Sans Pro (readability)",
+      "accent": "Bebas Neue (stats, labels, badges)"
+    },
+    "motif": "African sunset gradients, earth tones, organic curves, grass/savannah textures"
+  },
+
+  "conversionOptimization": {
+    "priorities": [
+      "Show price upfront on every package card — removes friction",
+      "WhatsApp floating CTA visible on every scroll position",
+      "Trust signals (star rating, review count) visible above fold or adjacent to CTAs",
+      "Sticky booking widget on package detail pages — always-on CTA",
+      "Hero CTA must be above fold on mobile (min 44px tap target)",
+      "Hero LCP image/video must load < 2s",
+      "Package cards use visual badges (Most Popular, Top Rated, Bucket List) for decision guidance"
+    ],
+    "ctaHierarchy": [
+      { "rank": 1, "label": "Book Now / Plan My Trip", "placement": "Hero, sticky nav, final CTA banner" },
+      { "rank": 2, "label": "WhatsApp Us", "placement": "Floating button (all pages), contact page" },
+      { "rank": 3, "label": "View Package", "placement": "Package cards" },
+      { "rank": 4, "label": "Explore All Packages", "placement": "Below featured packages section" },
+      { "rank": 5, "label": "Subscribe", "placement": "Newsletter section" }
+    ]
+  }
+}
