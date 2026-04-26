@@ -2,7 +2,6 @@ import {
   HeroSection,
   PackagesSection,
   PillarsSection,
-  TanzaniaMapSection,
   CurationsSection,
   CollectiveEchoSection,
   GeographySection,
