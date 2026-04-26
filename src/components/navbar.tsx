@@ -8,7 +8,12 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { RiMenuLine } from "@remixicon/react";
 
 const megaMenus = [
@@ -17,10 +22,22 @@ const megaMenus = [
     href: "/packages",
     items: [
       { label: "All Packages", href: "/packages" },
-      { label: "Southern Safari (Nyerere)", href: "/packages/nyerere-fly-in-safari-3-days" },
-      { label: "Northern Circuit (Serengeti)", href: "/packages/serengeti-ngorongoro-safari-3-days" },
-      { label: "Mafia Island Day Trip", href: "/packages/mafia-island-whale-shark-adventure-day-trip" },
-      { label: "Grand Safari — 6 Days", href: "/packages/grand-safari-zanzibar-6-days" },
+      {
+        label: "Southern Safari (Nyerere)",
+        href: "/packages/nyerere-fly-in-safari-3-days",
+      },
+      {
+        label: "Northern Circuit (Serengeti)",
+        href: "/packages/serengeti-ngorongoro-safari-3-days",
+      },
+      {
+        label: "Mafia Island Day Trip",
+        href: "/packages/mafia-island-whale-shark-adventure-day-trip",
+      },
+      {
+        label: "Grand Safari — 6 Days",
+        href: "/packages/grand-safari-zanzibar-6-days",
+      },
     ],
   },
   {
@@ -47,8 +64,11 @@ const simpleLinks = [
 export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-md">
-      <div className="flex justify-between items-center px-8 md:px-12 max-w-[1920px] mx-auto h-24">
-        <Link to="/" className="text-2xl font-bold text-primary tracking-tighter font-headline">
+      <div className="flex justify-between items-center px-8 md:px-12 max-w-[1920px] mx-auto h-16">
+        <Link
+          to="/"
+          className="text-2xl font-bold text-primary tracking-tighter font-headline"
+        >
           ZanziRocks
         </Link>
 
@@ -105,12 +125,21 @@ export default function Navbar() {
           {/* Mobile */}
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden text-white hover:text-primary hover:bg-transparent">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="md:hidden text-white hover:text-primary hover:bg-transparent"
+              >
                 <RiMenuLine />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-surface-dim border-outline-variant/20">
-              <SheetTitle className="text-primary font-headline text-2xl">ZanziRocks</SheetTitle>
+            <SheetContent
+              side="right"
+              className="bg-surface-dim border-outline-variant/20"
+            >
+              <SheetTitle className="text-primary font-headline text-2xl">
+                ZanziRocks
+              </SheetTitle>
               <nav className="flex flex-col gap-6 mt-8">
                 {[...megaMenus, ...simpleLinks].map(({ label, href }) => (
                   <Link
@@ -121,7 +150,10 @@ export default function Navbar() {
                     {label}
                   </Link>
                 ))}
-                <Button asChild className="mt-2 bg-primary text-on-primary hover:bg-primary-container tracking-widest text-xs font-bold uppercase">
+                <Button
+                  asChild
+                  className="mt-2 bg-primary text-on-primary hover:bg-primary-container tracking-widest text-xs font-bold uppercase"
+                >
                   <Link to="/contact">Book Now</Link>
                 </Button>
               </nav>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { RiWhatsappLine } from "@remixicon/react";
 
 const socials = [
   { label: "Instagram", href: "#" },
@@ -11,8 +12,42 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#131313] w-full pt-16 pb-10 px-8 md:px-12 border-t border-white/5">
-      <div className="max-w-[1440px] mx-auto">
+    <footer className="bg-[#131313] w-full border-t border-white/5">
+      {/* ── Compact CTA strip ── */}
+      <div className="max-w-[1440px] mx-auto px-8 md:px-12 py-7 flex flex-col sm:flex-row sm:items-center justify-between gap-5 border-b border-white/5">
+        <div className="flex flex-col gap-1 min-w-0">
+          <h3 className="font-headline text-2xl text-white leading-tight">
+            The Wild Won't Wait.
+          </h3>
+          <p className="text-on-surface-variant text-xs font-light max-w-sm leading-relaxed">
+            Tanzania's greatest moments are tied to the calendar — tell us when you're here.
+          </p>
+        </div>
+
+        <div className="flex items-center gap-3 shrink-0">
+          <Button
+            asChild
+            size="sm"
+            className="bg-primary text-on-primary hover:bg-primary-container font-bold uppercase tracking-widest text-[10px] px-6 shadow-lg shadow-primary/10"
+          >
+            <Link to="/contact">Plan My Safari</Link>
+          </Button>
+          <Button
+            asChild
+            size="sm"
+            variant="outline"
+            className="border-white/15 bg-white/5 text-white hover:bg-white/10 hover:text-white font-bold uppercase tracking-widest text-[10px] px-5 gap-2 backdrop-blur-sm"
+          >
+            <a href="https://wa.me/255777415192" target="_blank" rel="noopener noreferrer">
+              <RiWhatsappLine data-icon="inline-start" />
+              WhatsApp
+            </a>
+          </Button>
+        </div>
+      </div>
+
+      {/* ── Main footer ── */}
+      <div className="max-w-[1440px] mx-auto px-8 md:px-12 pt-10 pb-10">
         <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-12">
           <div>
             <Link to="/" className="text-2xl font-bold text-primary mb-8 block font-headline">

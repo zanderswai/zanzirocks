@@ -5,6 +5,5 @@ export { default as GeographySection } from "./geography.section";
 export { default as PackagesSection } from "./packages.section";
 export { default as PillarsSection } from "./pillars.section";
 export { default as PostcardsSection } from "./postcards.section";
-export { default as TanzaniaMapSection } from "./tanzania-map.section";
 export { default as TrustSection } from "./trust.section";
 export { default as CTASection } from "./cta.section";

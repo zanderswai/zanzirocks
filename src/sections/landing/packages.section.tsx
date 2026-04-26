@@ -244,62 +244,75 @@ function matchesDuration(pkg: ZanziPackage, duration: string): boolean {
 
 function PackageCard({ pkg }: { pkg: ZanziPackage }) {
   return (
-    <div className="group flex flex-col rounded-lg overflow-hidden bg-surface-container border border-outline-variant/10 hover:border-primary/20 transition-colors">
-      <div className="relative h-52 overflow-hidden shrink-0">
-        <img
-          alt={pkg.title}
-          src={pkg.image}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent" />
-        <Badge
-          variant="secondary"
-          className="absolute top-3 left-3 font-label uppercase tracking-widest text-[10px]"
-        >
-          {pkg.badge}
-        </Badge>
-      </div>
+    <Link
+      to={`/packages/${pkg.slug}`}
+      className="group relative block rounded-xl overflow-hidden h-[420px] md:h-[450px] cursor-pointer"
+      aria-label={`${pkg.title} — ${pkg.price}`}
+    >
+      {/* Full-bleed background image */}
+      <img
+        alt={pkg.title}
+        src={pkg.image}
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+        loading="lazy"
+      />
 
-      <div className="flex flex-col gap-3 p-5 flex-1">
+      {/* Gradient stack */}
+      {/* Primary: dark vignette from bottom for content legibility */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/96 via-black/50 to-transparent" />
+      {/* Secondary: top badge shadow */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-transparent" />
+      {/* Hover: amber colour wash */}
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/12 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+      {/* Badge */}
+      <Badge
+        variant="secondary"
+        className="absolute top-4 left-4 font-label uppercase tracking-widest text-[10px] shadow-lg"
+      >
+        {pkg.badge}
+      </Badge>
+
+      {/* Content overlay */}
+      <div className="absolute inset-x-0 bottom-0 flex flex-col gap-3 p-5">
+        {/* Meta row */}
         <div className="flex items-center gap-2 flex-wrap">
-          <span className="flex items-center gap-1 font-label text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">
-            <RiMapPinLine className="size-3 text-primary" />
+          <span className="flex items-center gap-1.5 font-label text-[10px] uppercase tracking-widest text-white/55 font-bold">
+            <RiMapPinLine className="size-3 text-primary shrink-0" />
             {pkg.category}
           </span>
-          <span className="text-outline-variant/40">·</span>
-          <span className="flex items-center gap-1 font-label text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">
-            <RiTimeLine className="size-3 text-primary" />
+          <span className="text-white/20">·</span>
+          <span className="flex items-center gap-1.5 font-label text-[10px] uppercase tracking-widest text-white/55 font-bold">
+            <RiTimeLine className="size-3 text-primary shrink-0" />
             {pkg.duration}
           </span>
         </div>
 
-        <h3 className="font-headline text-xl text-white leading-snug flex-1">{pkg.title}</h3>
+        {/* Title */}
+        <h3 className="font-headline text-[1.6rem] leading-tight text-white">{pkg.title}</h3>
 
-        <ul className="flex flex-col gap-1.5">
-          {pkg.highlights.map((h) => (
-            <li key={h} className="flex items-start gap-2 text-[11px] text-on-surface-variant font-light">
-              <span className="mt-0.5 size-1.5 rounded-full bg-primary shrink-0" />
-              {h}
-            </li>
-          ))}
-        </ul>
+        {/* Highlights: always visible on mobile, revealed on hover on desktop */}
+        <div className="grid grid-rows-[1fr] md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] transition-all duration-500 ease-out">
+          <ul className="overflow-hidden flex flex-col gap-1.5">
+            {pkg.highlights.map((h) => (
+              <li key={h} className="flex items-start gap-2 text-[11px] text-white/60 font-light leading-snug">
+                <span className="mt-[3px] size-1.5 rounded-full bg-primary shrink-0" />
+                {h}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        <div className="flex items-center justify-between pt-2 border-t border-outline-variant/10 mt-auto">
+        {/* Price + CTA */}
+        <div className="flex items-center justify-between border-t border-white/10 pt-3">
           <span className="font-label text-primary font-bold text-sm tracking-wider">{pkg.price}</span>
-          <Button
-            variant="ghost"
-            size="sm"
-            asChild
-            className="text-primary hover:text-primary hover:bg-primary/10 gap-1.5 px-2 font-bold uppercase tracking-widest text-[10px]"
-          >
-            <Link to={`/packages/${pkg.slug}`}>
-              Book Now
-              <RiArrowRightLine data-icon="inline-end" />
-            </Link>
-          </Button>
+          <span className="flex items-center gap-1.5 font-label text-[10px] uppercase tracking-widest text-white/50 group-hover:text-primary font-bold transition-colors duration-300">
+            Book Now
+            <RiArrowRightLine className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+          </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
