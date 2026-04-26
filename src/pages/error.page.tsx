@@ -1,0 +1,70 @@
+import { Link, useRouteError, isRouteErrorResponse } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { RiArrowLeftLine, RiRefreshLine } from "@remixicon/react";
+
+export default function ErrorPage() {
+  const error = useRouteError();
+  const code = isRouteErrorResponse(error) ? error.status : 500;
+
+  return (
+    <div className="relative w-full h-screen overflow-hidden flex items-center justify-center">
+      {/* Background */}
+      <img
+        alt=""
+        src="/images/505.JPG"
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      {/* Gradient overlays */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-xl">
+        <Badge
+          variant="outline"
+          className="border-primary/40 text-primary font-label uppercase tracking-widest text-xs mb-8"
+        >
+          {code} · Something Broke
+        </Badge>
+
+        <h1 className="font-headline text-7xl md:text-9xl text-white leading-none mb-4">
+          Oops. <br />
+          <span className="italic font-normal text-primary">Our fault.</span>
+        </h1>
+
+        <p className="text-on-surface-variant text-sm md:text-base font-light leading-relaxed mb-10 max-w-sm">
+          Something broke on our end. The animals are fine — it's just us.
+          Circle back home and we'll sort it out.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Button
+            asChild
+            className="bg-primary text-on-primary hover:bg-primary-container font-bold uppercase tracking-widest text-xs px-10 shadow-lg shadow-primary/20 hover:scale-105 transition-transform"
+          >
+            <Link to="/">
+              <RiArrowLeftLine data-icon="inline-start" />
+              Circle Back Home
+            </Link>
+          </Button>
+          <Button
+            variant="outline"
+            onClick={() => window.location.reload()}
+            className="border-white/20 bg-white/10 backdrop-blur-md text-white hover:bg-white/20 hover:text-white font-bold uppercase tracking-widest text-xs px-8 gap-2 cursor-pointer"
+          >
+            <RiRefreshLine data-icon="inline-start" />
+            Try Again
+          </Button>
+        </div>
+      </div>
+
+      {/* Bottom strip */}
+      <p className="absolute bottom-5 left-1/2 -translate-x-1/2 font-label text-[10px] text-white/25 uppercase tracking-[0.3em] select-none whitespace-nowrap">
+        ZanziRocks · Stone Town, Zanzibar, Tanzania
+      </p>
+    </div>
+  );
+}

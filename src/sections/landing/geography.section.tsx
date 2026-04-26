@@ -1,6 +1,11 @@
 import { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { MapContainer, TileLayer, Marker, Tooltip as MapTooltip } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Tooltip as MapTooltip,
+} from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { Badge } from "@/components/ui/badge";
@@ -18,54 +23,176 @@ type MapDest = {
 };
 
 const destinations: MapDest[] = [
-  { id: "zanzibar",     name: "Zanzibar Island",       heroTag: "Your Gateway to Everything",        type: "island",  coords: [-6.165,  39.202], href: "/destinations/zanzibar"     },
-  { id: "nyerere",      name: "Nyerere National Park", heroTag: "Africa's Largest National Park",    type: "safari",  coords: [-9.6,    37.8  ], href: "/destinations/nyerere"      },
-  { id: "serengeti",    name: "Serengeti",             heroTag: "The Great Migration",               type: "safari",  coords: [-2.33,   34.83 ], href: "/destinations/serengeti"    },
-  { id: "ngorongoro",   name: "Ngorongoro Crater",     heroTag: "World's Largest Intact Caldera",    type: "safari",  coords: [-3.18,   35.59 ], href: "/destinations/ngorongoro"   },
-  { id: "tarangire",    name: "Tarangire",             heroTag: "Land of the Giants",                type: "safari",  coords: [-4.0,    36.0  ], href: "/destinations/tarangire"    },
-  { id: "lake-manyara", name: "Lake Manyara",          heroTag: "Jewel of the Rift Valley",          type: "safari",  coords: [-3.5,    35.83 ], href: "/destinations/lake-manyara" },
-  { id: "mafia-island", name: "Mafia Island",          heroTag: "Swim With Giants",                  type: "island",  coords: [-7.9,    39.85 ], href: "/destinations/mafia-island" },
-  { id: "arusha",       name: "Arusha",                heroTag: "Gateway to the Northern Circuit",   type: "gateway", coords: [-3.37,   36.68 ], href: "/destinations/arusha"       },
+  {
+    id: "zanzibar",
+    name: "Zanzibar Island",
+    heroTag: "Your Gateway to Everything",
+    type: "island",
+    coords: [-6.165, 39.202],
+    href: "/destinations/zanzibar",
+  },
+  {
+    id: "nyerere",
+    name: "Nyerere National Park",
+    heroTag: "Africa's Largest National Park",
+    type: "safari",
+    coords: [-9.6, 37.8],
+    href: "/destinations/nyerere",
+  },
+  {
+    id: "serengeti",
+    name: "Serengeti",
+    heroTag: "The Great Migration",
+    type: "safari",
+    coords: [-2.33, 34.83],
+    href: "/destinations/serengeti",
+  },
+  {
+    id: "ngorongoro",
+    name: "Ngorongoro Crater",
+    heroTag: "World's Largest Intact Caldera",
+    type: "safari",
+    coords: [-3.18, 35.59],
+    href: "/destinations/ngorongoro",
+  },
+  {
+    id: "tarangire",
+    name: "Tarangire",
+    heroTag: "Land of the Giants",
+    type: "safari",
+    coords: [-4.0, 36.0],
+    href: "/destinations/tarangire",
+  },
+  {
+    id: "lake-manyara",
+    name: "Lake Manyara",
+    heroTag: "Jewel of the Rift Valley",
+    type: "safari",
+    coords: [-3.5, 35.83],
+    href: "/destinations/lake-manyara",
+  },
+  {
+    id: "mafia-island",
+    name: "Mafia Island",
+    heroTag: "Swim With Giants",
+    type: "island",
+    coords: [-7.9, 39.85],
+    href: "/destinations/mafia-island",
+  },
+  {
+    id: "arusha",
+    name: "Arusha",
+    heroTag: "Gateway to the Northern Circuit",
+    type: "gateway",
+    coords: [-3.37, 36.68],
+    href: "/destinations/arusha",
+  },
 ] as const;
 
 const TYPE_COLORS: Record<DestType, string> = {
-  safari:  "#f2ca50",
-  island:  "#60a5fa",
+  safari: "#f2ca50",
+  island: "#60a5fa",
   gateway: "#6b7280",
 };
 
 const TYPE_LABELS: Record<DestType, string> = {
-  safari:  "Safari Destination",
-  island:  "Island Experience",
+  safari: "Safari Destination",
+  island: "Island Experience",
   gateway: "Gateway City",
 };
 
 const LEGEND_TYPES: DestType[] = ["safari", "island", "gateway"];
 
 const TANZANIA_CENTER: [number, number] = [-6.3, 35.0];
-const TANZANIA_BOUNDS: [[number, number], [number, number]] = [[-13, 28], [0, 43]];
+const TANZANIA_BOUNDS: [[number, number], [number, number]] = [
+  [-13, 28],
+  [0, 43],
+];
 
 // ─── Compass ──────────────────────────────────────────────────────────────────
 
 function Compass() {
   return (
     <div className="absolute top-5 right-5 z-[1000] bg-surface-container/85 backdrop-blur-md rounded-full border border-outline-variant/20 size-[52px] flex items-center justify-center shadow-xl">
-      <svg viewBox="0 0 48 48" className="size-9" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        viewBox="0 0 48 48"
+        className="size-9"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         {/* N arrow */}
         <path d="M24 6 L27.5 21 L24 19 L20.5 21 Z" fill="#f2ca50" />
         {/* S arrow */}
-        <path d="M24 42 L20.5 27 L24 29 L27.5 27 Z" fill="currentColor" opacity="0.25" className="text-on-surface" />
+        <path
+          d="M24 42 L20.5 27 L24 29 L27.5 27 Z"
+          fill="currentColor"
+          opacity="0.25"
+          className="text-on-surface"
+        />
         {/* W arrow */}
-        <path d="M6 24 L21 20.5 L19 24 L21 27.5 Z" fill="currentColor" opacity="0.25" className="text-on-surface" />
+        <path
+          d="M6 24 L21 20.5 L19 24 L21 27.5 Z"
+          fill="currentColor"
+          opacity="0.25"
+          className="text-on-surface"
+        />
         {/* E arrow */}
-        <path d="M42 24 L27 27.5 L29 24 L27 20.5 Z" fill="currentColor" opacity="0.25" className="text-on-surface" />
+        <path
+          d="M42 24 L27 27.5 L29 24 L27 20.5 Z"
+          fill="currentColor"
+          opacity="0.25"
+          className="text-on-surface"
+        />
         {/* Center dot */}
         <circle cx="24" cy="24" r="2.5" fill="#f2ca50" />
         {/* Labels */}
-        <text x="24" y="9"  textAnchor="middle" fill="#f2ca50" fontSize="5.5" fontWeight="700" fontFamily="sans-serif">N</text>
-        <text x="24" y="46" textAnchor="middle" fill="currentColor" fontSize="4.5" opacity="0.4" fontFamily="sans-serif" className="text-on-surface">S</text>
-        <text x="4"  y="25.5" textAnchor="middle" fill="currentColor" fontSize="4.5" opacity="0.4" fontFamily="sans-serif" className="text-on-surface">W</text>
-        <text x="44" y="25.5" textAnchor="middle" fill="currentColor" fontSize="4.5" opacity="0.4" fontFamily="sans-serif" className="text-on-surface">E</text>
+        <text
+          x="24"
+          y="9"
+          textAnchor="middle"
+          fill="#f2ca50"
+          fontSize="5.5"
+          fontWeight="700"
+          fontFamily="sans-serif"
+        >
+          N
+        </text>
+        <text
+          x="24"
+          y="46"
+          textAnchor="middle"
+          fill="currentColor"
+          fontSize="4.5"
+          opacity="0.4"
+          fontFamily="sans-serif"
+          className="text-on-surface"
+        >
+          S
+        </text>
+        <text
+          x="4"
+          y="25.5"
+          textAnchor="middle"
+          fill="currentColor"
+          fontSize="4.5"
+          opacity="0.4"
+          fontFamily="sans-serif"
+          className="text-on-surface"
+        >
+          W
+        </text>
+        <text
+          x="44"
+          y="25.5"
+          textAnchor="middle"
+          fill="currentColor"
+          fontSize="4.5"
+          opacity="0.4"
+          fontFamily="sans-serif"
+          className="text-on-surface"
+        >
+          E
+        </text>
       </svg>
     </div>
   );
@@ -85,7 +212,9 @@ function Legend() {
             className="size-2.5 rounded-full shrink-0"
             style={{ backgroundColor: TYPE_COLORS[type] }}
           />
-          <span className="text-on-surface text-[11px] font-light">{TYPE_LABELS[type]}</span>
+          <span className="text-on-surface text-[11px] font-light">
+            {TYPE_LABELS[type]}
+          </span>
         </div>
       ))}
     </div>
@@ -147,7 +276,8 @@ export default function GeographySection() {
         </Badge>
         <h2 className="font-headline text-5xl">Tanzania, All in One Place</h2>
         <p className="text-on-surface-variant mt-4 text-sm max-w-md mx-auto font-light leading-relaxed">
-          Nine extraordinary destinations — one team, rooted in Stone Town. Tap any pin to explore.
+          Nine extraordinary destinations — one team, rooted in Stone Town. Tap
+          any pin to explore.
         </p>
       </div>
 
@@ -174,7 +304,11 @@ export default function GeographySection() {
             maxZoom={20}
           />
           {destinations.map((dest) => (
-            <DestinationMarker key={dest.id} dest={dest} onNavigate={navigate} />
+            <DestinationMarker
+              key={dest.id}
+              dest={dest}
+              onNavigate={navigate}
+            />
           ))}
         </MapContainer>
 
@@ -193,11 +327,17 @@ export default function GeographySection() {
       {/* Coordinate pill */}
       <div className="mt-5 flex justify-center">
         <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-outline-variant/20 bg-surface-container/50 backdrop-blur-sm">
-          <RiMapPin2Line className="size-3 text-primary shrink-0" aria-hidden="true" />
+          <RiMapPin2Line
+            className="size-3 text-primary shrink-0"
+            aria-hidden="true"
+          />
           <span className="font-label text-[10px] text-on-surface-variant tracking-[0.22em] uppercase tabular-nums select-all">
             6°22′22″ S &nbsp;·&nbsp; 34°53′33″ E
           </span>
-          <span className="size-1 rounded-full bg-outline-variant/40 shrink-0" aria-hidden="true" />
+          <span
+            className="size-1 rounded-full bg-outline-variant/40 shrink-0"
+            aria-hidden="true"
+          />
           <span className="font-headline text-xs italic text-on-surface-variant/50">
             "The sky is wider here."
           </span>
