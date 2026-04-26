@@ -9,9 +9,9 @@ export default function HeroSection() {
         <img
           alt="Savannah Sunrise"
           className="w-full h-full object-cover"
-          src="https://images.unsplash.com/photo-1591129250837-b40afb3609e1?q=80&w=2670&auto=format&fit=crop"
+          src="/images/wallpaper.jpg"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface/20 via-surface/40 to-surface" />
+        <div className="absolute inset-0 bg-gradient-to-b from-surface/0 via-surface/10 to-background" />
       </div>
 
       <div className="relative z-10 text-center px-4 max-w-4xl">
@@ -20,7 +20,9 @@ export default function HeroSection() {
         </span>
         <h1 className="text-6xl md:text-9xl font-headline font-bold text-white mb-12 tracking-tight leading-none text-shadow-hero">
           Unearth the <br />
-          <span className="italic text-stroke-primary font-normal">Extraordinary</span>
+          <span className="italic text-stroke-primary font-normal">
+            Extraordinary
+          </span>
         </h1>
 
         <div className="max-w-2xl mx-auto bg-surface-container/60 backdrop-blur-xl p-2 rounded-xl flex flex-col md:flex-row items-center gap-2 border border-outline-variant/30 shadow-2xl">

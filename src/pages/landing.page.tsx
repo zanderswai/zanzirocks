@@ -19,7 +19,6 @@ export default function LandingPage() {
       <div className="max-w-[1920px] mx-auto px-4 sm:px-8 lg:px-12">
         <PackagesSection />
         <PillarsSection />
-        <TanzaniaMapSection />
         <CurationsSection />
         <CollectiveEchoSection />
         <GeographySection />
