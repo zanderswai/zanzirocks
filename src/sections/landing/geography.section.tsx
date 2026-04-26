@@ -4,6 +4,7 @@ import { MapContainer, TileLayer, Marker, Tooltip as MapTooltip } from "react-le
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { Badge } from "@/components/ui/badge";
+import { RiMapPin2Line } from "@remixicon/react";
 
 type DestType = "safari" | "island" | "gateway";
 
@@ -152,7 +153,7 @@ export default function GeographySection() {
 
       {/* Map container */}
       <div
-        className="relative rounded-2xl overflow-hidden"
+        className="relative rounded-2xl overflow-hidden border border-outline-variant/20"
         style={{ height: 580, isolation: "isolate" }}
       >
         <MapContainer
@@ -188,6 +189,19 @@ export default function GeographySection() {
         <p className="absolute bottom-2 right-3 z-[1000] text-[9px] text-on-surface-variant/30 font-label select-none pointer-events-none">
           © OpenStreetMap contributors · © CARTO
         </p>
+      </div>
+      {/* Coordinate pill */}
+      <div className="mt-5 flex justify-center">
+        <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-outline-variant/20 bg-surface-container/50 backdrop-blur-sm">
+          <RiMapPin2Line className="size-3 text-primary shrink-0" aria-hidden="true" />
+          <span className="font-label text-[10px] text-on-surface-variant tracking-[0.22em] uppercase tabular-nums select-all">
+            6°22′22″ S &nbsp;·&nbsp; 34°53′33″ E
+          </span>
+          <span className="size-1 rounded-full bg-outline-variant/40 shrink-0" aria-hidden="true" />
+          <span className="font-headline text-xs italic text-on-surface-variant/50">
+            "The sky is wider here."
+          </span>
+        </div>
       </div>
     </section>
   );

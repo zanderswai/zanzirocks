@@ -5,7 +5,6 @@ import {
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -88,56 +87,67 @@ type Review = (typeof reviews)[number];
 
 function ReviewCard({ review }: { review: Review }) {
   return (
-    <Card className="bg-surface-container border-outline-variant/10 overflow-hidden h-full flex flex-col">
-      <div className="relative h-52 shrink-0 overflow-hidden">
-        <img
-          alt={`${review.name}'s review photo`}
-          src={review.image}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          loading="lazy"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent" />
-      </div>
+    <div className="group relative rounded-xl overflow-hidden h-[390px] md:h-[410px]">
+      {/* Full-bleed image */}
+      <img
+        alt={`${review.name}'s review`}
+        src={review.image}
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+        loading="lazy"
+      />
 
-      <CardContent className="flex-1 flex flex-col gap-4 pt-5 pb-6">
-        {/* Stars */}
-        <div className="flex gap-0.5 text-primary" aria-label={`${review.stars} out of 5 stars`}>
+      {/* Gradient stack — heavier mid-veil than PackageCard, no amber wash */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/98 via-black/70 to-black/10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-transparent" />
+      {/* Hover: cool silver shimmer (distinct from packages' amber) */}
+      <div className="absolute inset-0 bg-gradient-to-t from-white/6 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+      {/* Top-left: stars + package */}
+      <div className="absolute top-4 left-4 flex flex-col gap-2">
+        <div className="flex gap-0.5" aria-label={`${review.stars} out of 5 stars`}>
           {Array.from({ length: review.stars }).map((_, i) => (
-            <RiStarFill key={i} className="size-3" aria-hidden="true" />
+            <RiStarFill key={i} className="size-3 text-primary" aria-hidden="true" />
           ))}
         </div>
-
-        {/* Quote */}
-        <blockquote className="text-sm text-on-surface-variant italic font-light leading-relaxed flex-1">
-          &ldquo;{review.quote}&rdquo;
-        </blockquote>
-
-        {/* Package tag */}
         <Badge
           variant="outline"
-          className="w-fit border-primary/20 text-primary/70 font-label uppercase tracking-[0.15em] text-[9px]"
+          className="w-fit border-white/20 text-white/60 font-label uppercase tracking-[0.12em] text-[9px] backdrop-blur-sm"
         >
           {review.package}
         </Badge>
+      </div>
 
-        {/* Reviewer */}
-        <div className="flex items-center gap-3">
-          <Avatar className="size-8">
-            <AvatarFallback className="bg-primary-container/20 text-primary text-[10px] font-bold">
+      {/* Decorative quote mark — top-right watermark */}
+      <span
+        className="absolute top-3 right-5 font-headline text-[5.5rem] leading-none text-white/8 select-none pointer-events-none"
+        aria-hidden="true"
+      >
+        &ldquo;
+      </span>
+
+      {/* Bottom: quote + reviewer */}
+      <div className="absolute inset-x-0 bottom-0 flex flex-col gap-3 p-5">
+        <blockquote className="font-headline text-xl text-white leading-snug italic">
+          &ldquo;{review.quote}&rdquo;
+        </blockquote>
+
+        <div className="flex items-center gap-3 pt-2.5 border-t border-white/10">
+          <Avatar className="size-7 shrink-0">
+            <AvatarFallback className="bg-primary-container/30 text-primary text-[10px] font-bold">
               {review.initials}
             </AvatarFallback>
           </Avatar>
-          <div className="flex flex-col">
-            <span className="font-label text-[11px] font-bold text-on-surface">
+          <div className="flex flex-col min-w-0">
+            <span className="font-label text-[11px] font-bold text-white truncate">
               {review.name}
             </span>
-            <span className="text-on-surface-variant text-[10px] font-light">
+            <span className="text-white/45 text-[10px] font-light">
               {review.flag} {review.country}
             </span>
           </div>
         </div>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 }
 
