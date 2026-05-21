@@ -4,6 +4,7 @@ import LandingPage from "@/sections/pages/landing.page";
 import NotFoundPage from "@/sections/pages/not-found.page";
 import ErrorPage from "@/sections/pages/error.page";
 import ZanzibarPage from "@/sections/pages/destinations/zanzibar.page";
+import NyererePage from "@/sections/pages/destinations/nyerere.page";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <LandingPage /> },
       { path: "destinations/zanzibar", element: <ZanzibarPage /> },
+      { path: "destinations/nyerere", element: <NyererePage /> },
     ],
   },
   {
