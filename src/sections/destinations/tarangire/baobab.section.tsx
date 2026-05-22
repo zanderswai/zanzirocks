@@ -34,8 +34,8 @@ export default function TarangireBaobabSection() {
 
       {/* Fact grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/10 rounded-xl overflow-hidden">
-        {BAOBAB_FACTS.map((fact) => (
-          <div key={fact.label} className="bg-surface-container px-8 py-8 flex flex-col gap-3">
+        {BAOBAB_FACTS.map((fact, i) => (
+          <div key={i} className="bg-surface-container px-8 py-8 flex flex-col gap-3">
             <div className="flex items-baseline gap-2">
               <span className="font-headline text-4xl text-primary">{fact.value}</span>
               <span className="font-label text-[9px] uppercase tracking-widest text-on-surface-variant/50">{fact.label}</span>

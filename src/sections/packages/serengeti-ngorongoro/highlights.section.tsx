@@ -3,7 +3,7 @@ import { Separator } from "@/components/ui/separator";
 
 type IconEntry = {
   label: string;
-  icon: string;
+  icon?: string;
   highlight?: boolean;
 };
 
@@ -60,15 +60,25 @@ export default function SerengetiNgorongoroHighlightsSection() {
 
           <div className="absolute inset-x-0 bottom-0 p-7 flex flex-col gap-4">
             <div>
-              <p className="font-label text-[8px] uppercase tracking-widest text-amber-400/70 mb-1">Days 1 – 2</p>
-              <h3 className="font-headline text-3xl text-white">The Serengeti</h3>
-              <p className="text-white/55 text-xs font-light mt-1">The greatest wildlife show on earth</p>
+              <p className="font-label text-[8px] uppercase tracking-widest text-amber-400/70 mb-1">
+                Days 1 – 2
+              </p>
+              <h3 className="font-headline text-3xl text-white">
+                The Serengeti
+              </h3>
+              <p className="text-white/55 text-xs font-light mt-1">
+                The greatest wildlife show on earth
+              </p>
             </div>
             <div className="grid grid-cols-2 gap-1.5">
-              {SERENGETI_ICONS.map((item) => (
-                <div key={item.label} className="flex items-center gap-1.5">
-                  <span className={`size-1.5 rounded-full shrink-0 ${item.highlight ? "bg-primary" : "bg-white/20"}`} />
-                  <span className={`font-label text-[9px] uppercase tracking-wide ${item.highlight ? "text-white/70" : "text-white/35"}`}>
+              {SERENGETI_ICONS.map((item, i) => (
+                <div key={i} className="flex items-center gap-1.5">
+                  <span
+                    className={`size-1.5 rounded-full shrink-0 ${item.highlight ? "bg-primary" : "bg-white/20"}`}
+                  />
+                  <span
+                    className={`font-label text-[9px] uppercase tracking-wide ${item.highlight ? "text-white/70" : "text-white/35"}`}
+                  >
                     {item.label}
                   </span>
                 </div>
@@ -90,15 +100,25 @@ export default function SerengetiNgorongoroHighlightsSection() {
 
           <div className="absolute inset-x-0 bottom-0 p-7 flex flex-col gap-4">
             <div>
-              <p className="font-label text-[8px] uppercase tracking-widest text-primary/70 mb-1">Day 3</p>
-              <h3 className="font-headline text-3xl text-white">Ngorongoro Crater</h3>
-              <p className="text-white/55 text-xs font-light mt-1">260 km² of enclosed wildlife paradise</p>
+              <p className="font-label text-[8px] uppercase tracking-widest text-primary/70 mb-1">
+                Day 3
+              </p>
+              <h3 className="font-headline text-3xl text-white">
+                Ngorongoro Crater
+              </h3>
+              <p className="text-white/55 text-xs font-light mt-1">
+                260 km² of enclosed wildlife paradise
+              </p>
             </div>
             <div className="grid grid-cols-2 gap-1.5">
-              {NGORONGORO_ICONS.map((item) => (
-                <div key={item.label} className="flex items-center gap-1.5">
-                  <span className={`size-1.5 rounded-full shrink-0 ${item.highlight ? "bg-primary" : "bg-white/20"}`} />
-                  <span className={`font-label text-[9px] uppercase tracking-wide ${item.highlight ? "text-white/70" : "text-white/35"}`}>
+              {NGORONGORO_ICONS.map((item, i) => (
+                <div key={i} className="flex items-center gap-1.5">
+                  <span
+                    className={`size-1.5 rounded-full shrink-0 ${item.highlight ? "bg-primary" : "bg-white/20"}`}
+                  />
+                  <span
+                    className={`font-label text-[9px] uppercase tracking-wide ${item.highlight ? "text-white/70" : "text-white/35"}`}
+                  >
                     {item.label}
                   </span>
                 </div>

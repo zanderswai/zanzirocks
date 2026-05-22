@@ -70,7 +70,8 @@ export default function MafiaItinerarySection() {
           <span className="italic text-primary">A Lifetime's Memory.</span>
         </h2>
         <p className="text-on-surface-variant text-sm font-light max-w-md mx-auto leading-relaxed">
-          Every detail handled. You just show up. Here's what your day looks like.
+          Every detail handled. You just show up. Here's what your day looks
+          like.
         </p>
       </div>
 
@@ -81,7 +82,7 @@ export default function MafiaItinerarySection() {
 
         <div className="flex flex-col gap-0">
           {STEPS.map((step, i) => (
-            <div key={step.title} className="relative flex gap-6 sm:gap-10">
+            <div key={i} className="relative flex gap-6 sm:gap-10">
               {/* Time column */}
               <div className="w-16 sm:w-16 shrink-0 pt-6 text-right">
                 <span className="font-label text-[10px] text-on-surface-variant/40 tracking-wider">

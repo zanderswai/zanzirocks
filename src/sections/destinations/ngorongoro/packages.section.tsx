@@ -28,7 +28,7 @@ function PackageCard({ pkg }: { pkg: NgoPackage }) {
         <h3 className="font-headline text-xl text-white leading-tight">{pkg.title}</h3>
         <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-out">
           <ul className="overflow-hidden flex flex-col gap-1.5">
-            {pkg.highlights.map((h) => (<li key={h} className="flex items-start gap-2 text-[11px] text-white/60 font-light leading-snug"><span className="mt-[3px] size-1.5 rounded-full bg-primary shrink-0" />{h}</li>))}
+            {pkg.highlights.map((h, i) => (<li key={i} className="flex items-start gap-2 text-[11px] text-white/60 font-light leading-snug"><span className="mt-[3px] size-1.5 rounded-full bg-primary shrink-0" />{h}</li>))}
           </ul>
         </div>
         <div className="flex items-center justify-between border-t border-white/10 pt-3 mt-1">

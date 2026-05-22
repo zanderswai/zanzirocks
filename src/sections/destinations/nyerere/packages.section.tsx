@@ -135,8 +135,8 @@ function PackageRow({ pkg, index }: { pkg: NyererePackage; index: number }) {
           <h3 className="font-headline text-2xl text-white leading-tight">{pkg.title}</h3>
 
           <ul className="flex flex-col gap-2">
-            {pkg.highlights.map((h) => (
-              <li key={h} className="flex items-start gap-2 text-[11px] text-on-surface-variant font-light leading-snug">
+            {pkg.highlights.map((h, i) => (
+              <li key={i} className="flex items-start gap-2 text-[11px] text-on-surface-variant font-light leading-snug">
                 <span className="mt-[3px] size-1.5 rounded-full bg-primary/60 shrink-0" />
                 {h}
               </li>

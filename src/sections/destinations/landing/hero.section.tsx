@@ -34,9 +34,9 @@ export default function DestinationsHeroSection() {
 
         {/* Destination pill anchors */}
         <div className="flex flex-wrap gap-2">
-          {PILLS.map((pill) => (
+          {PILLS.map((pill, i) => (
             <Link
-              key={pill.href}
+              key={i}
               to={pill.href}
               className="font-label text-[9px] uppercase tracking-widest border border-outline-variant/20 text-on-surface-variant/60 hover:border-primary/50 hover:text-primary rounded-full px-3 py-1.5 transition-colors duration-200"
             >

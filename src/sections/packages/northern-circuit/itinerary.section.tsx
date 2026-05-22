@@ -82,9 +82,9 @@ export default function NorthernCircuitItinerarySection() {
       </div>
 
       <div className="flex flex-col gap-6">
-        {DAYS.map((day) => (
+        {DAYS.map((day, i) => (
           <div
-            key={day.day}
+            key={i}
             className={cn(
               "grid grid-cols-1 md:grid-cols-[140px_1fr] gap-6 rounded-2xl border p-7 md:p-8",
               day.highlight
@@ -104,8 +104,8 @@ export default function NorthernCircuitItinerarySection() {
             </div>
 
             <ul className="flex flex-col gap-2.5">
-              {day.items.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm text-on-surface-variant font-light">
+              {day.items.map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-sm text-on-surface-variant font-light">
                   <span className={cn(
                     "mt-[6px] size-1.5 rounded-full shrink-0",
                     day.highlight ? "bg-primary" : "bg-outline-variant/60",

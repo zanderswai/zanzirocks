@@ -45,7 +45,7 @@ export default function NyerereExperienceSection() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {MODES.map((mode, i) => (
           <div
-            key={mode.label}
+            key={i}
             className="group relative rounded-2xl overflow-hidden h-[420px]"
           >
             <img

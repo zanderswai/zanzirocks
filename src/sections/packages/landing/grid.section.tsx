@@ -165,8 +165,8 @@ function PackageCard({ pkg, featured = false }: { pkg: Package; featured?: boole
               {pkg.subtitle}
             </p>
             <ul className="flex flex-col gap-1.5 mb-3">
-              {pkg.highlights.map((h) => (
-                <li key={h} className="flex items-start gap-2 text-[11px] text-white/55 font-light">
+              {pkg.highlights.map((h, i) => (
+                <li key={i} className="flex items-start gap-2 text-[11px] text-white/55 font-light">
                   <span className="mt-[3px] size-1.5 rounded-full bg-primary shrink-0" />
                   {h}
                 </li>
@@ -277,8 +277,8 @@ export default function PackagesGridSection() {
           { value: "Local", label: "Expert guides, born here" },
           { value: "No hidden fees", label: "Price includes park entries" },
           { value: "24/7", label: "In-country support" },
-        ].map((item) => (
-          <div key={item.label} className="bg-surface-container px-6 py-5">
+        ].map((item, i) => (
+          <div key={i} className="bg-surface-container px-6 py-5">
             <p className="font-headline text-xl text-primary mb-0.5">{item.value}</p>
             <p className="font-label text-[9px] uppercase tracking-widest text-on-surface-variant/50">{item.label}</p>
           </div>

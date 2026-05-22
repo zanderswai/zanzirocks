@@ -45,8 +45,8 @@ export default function MafiaPackageSection() {
               What's Included
             </p>
             <ul className="flex flex-col gap-3">
-              {INCLUDES.map((item) => (
-                <li key={item} className="flex items-start gap-3">
+              {INCLUDES.map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
                   <RiCheckLine className="size-4 text-[#00b67a] mt-0.5 shrink-0" />
                   <span className="text-sm text-on-surface-variant font-light leading-snug">{item}</span>
                 </li>
@@ -61,8 +61,8 @@ export default function MafiaPackageSection() {
               Not Included
             </p>
             <ul className="flex flex-col gap-3">
-              {EXCLUDES.map((item) => (
-                <li key={item} className="flex items-start gap-3">
+              {EXCLUDES.map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
                   <RiCloseLine className="size-4 text-on-surface-variant/40 mt-0.5 shrink-0" />
                   <span className="text-sm text-on-surface-variant/60 font-light leading-snug">{item}</span>
                 </li>

@@ -37,7 +37,7 @@ export default function WhaleSharkExperienceSection() {
       <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 items-start">
         <div className="flex flex-col gap-8">
           {FACTS.map((fact, i) => (
-            <div key={fact.label}>
+            <div key={i}>
               <div className="flex items-baseline gap-3 mb-2">
                 <span className="font-headline text-4xl text-primary">{fact.value}</span>
                 <span className="font-label text-[9px] uppercase tracking-widest text-on-surface-variant/50">{fact.label}</span>
@@ -58,8 +58,8 @@ export default function WhaleSharkExperienceSection() {
                 "Encounters typically last 15–45 minutes per shark",
                 "Multiple encounters are common during the season",
                 "Your guide stays in the water with you at all times",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2.5 text-sm text-on-surface-variant font-light leading-snug">
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-2.5 text-sm text-on-surface-variant font-light leading-snug">
                   <span className="mt-[5px] size-1.5 rounded-full bg-primary shrink-0" />
                   {item}
                 </li>

@@ -59,8 +59,8 @@ export default function ZanzibarBestTimeSection() {
 
       {/* Month bars */}
       <div className="grid grid-cols-6 md:grid-cols-12 gap-2 mb-10">
-        {MONTHS.map((m) => (
-          <div key={m.short} className="flex flex-col items-center gap-2">
+        {MONTHS.map((m, i) => (
+          <div key={i} className="flex flex-col items-center gap-2">
             <div
               className={cn(
                 "w-full rounded-lg py-5 flex flex-col items-center justify-center gap-1.5",

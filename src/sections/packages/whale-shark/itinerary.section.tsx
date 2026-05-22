@@ -39,7 +39,7 @@ export default function WhaleSharkItinerarySection() {
       <div className="flex flex-col">
         {STEPS.map((step, i) => (
           <div
-            key={step.time}
+            key={i}
             className={cn(
               "grid grid-cols-[4rem_auto_1fr] sm:grid-cols-[5rem_auto_1fr] gap-x-4 sm:gap-x-6",
               i < STEPS.length - 1 ? "pb-8" : "",

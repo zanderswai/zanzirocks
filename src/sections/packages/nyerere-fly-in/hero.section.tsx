@@ -46,9 +46,9 @@ export default function NyerereHeroSection() {
         </h1>
 
         <div className="flex flex-wrap gap-2 mb-8">
-          {CHIPS.map((chip) => (
+          {CHIPS.map((chip, i) => (
             <div
-              key={chip.label}
+              key={i}
               className="flex items-center gap-2 bg-white/8 backdrop-blur-sm border border-white/12 rounded-full px-3 py-1.5"
             >
               <span className="font-headline text-sm text-primary">{chip.value}</span>

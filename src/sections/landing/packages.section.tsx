@@ -294,8 +294,8 @@ function PackageCard({ pkg }: { pkg: ZanziPackage }) {
         {/* Highlights: always visible on mobile, revealed on hover on desktop */}
         <div className="grid grid-rows-[1fr] md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] transition-all duration-500 ease-out">
           <ul className="overflow-hidden flex flex-col gap-1.5">
-            {pkg.highlights.map((h) => (
-              <li key={h} className="flex items-start gap-2 text-[11px] text-white/60 font-light leading-snug">
+            {pkg.highlights.map((h, i) => (
+              <li key={i} className="flex items-start gap-2 text-[11px] text-white/60 font-light leading-snug">
                 <span className="mt-[3px] size-1.5 rounded-full bg-primary shrink-0" />
                 {h}
               </li>

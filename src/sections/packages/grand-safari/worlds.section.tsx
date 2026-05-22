@@ -60,8 +60,8 @@ export default function GrandSafariWorldsSection() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {WORLDS.map((world) => (
-          <div key={world.label} className="group relative rounded-2xl overflow-hidden h-[500px]">
+        {WORLDS.map((world, i) => (
+          <div key={i} className="group relative rounded-2xl overflow-hidden h-[500px]">
             <img
               src={world.image}
               alt={world.imageAlt}
@@ -87,9 +87,9 @@ export default function GrandSafariWorldsSection() {
               </div>
 
               <div className="flex flex-wrap gap-1.5">
-                {world.facts.map((fact) => (
+                {world.facts.map((fact, i) => (
                   <span
-                    key={fact}
+                    key={i}
                     className="font-label text-[8px] uppercase tracking-widest border border-white/15 text-white/45 rounded-full px-2.5 py-1"
                   >
                     {fact}

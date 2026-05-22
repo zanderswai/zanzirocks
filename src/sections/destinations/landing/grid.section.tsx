@@ -175,8 +175,8 @@ function DestinationCard({ dest, size }: { dest: Destination; size: CardSize }) 
               {dest.tagline}
             </p>
             <ul className="flex flex-col gap-1.5 mb-4">
-              {dest.facts.map((fact) => (
-                <li key={fact} className="flex items-start gap-2 text-[11px] text-white/55 font-light">
+              {dest.facts.map((fact, i) => (
+                <li key={i} className="flex items-start gap-2 text-[11px] text-white/55 font-light">
                   <span className="mt-[3px] size-1.5 rounded-full bg-primary shrink-0" />
                   {fact}
                 </li>
@@ -241,8 +241,8 @@ function MafiaWideCard({ dest }: { dest: Destination }) {
               Explore <RiArrowRightLine className="size-3" />
             </Button>
             <ul className="hidden sm:flex flex-col gap-1">
-              {dest.facts.slice(0, 2).map((fact) => (
-                <li key={fact} className="flex items-center gap-1.5 text-[10px] text-on-surface-variant/50 font-light">
+              {dest.facts.slice(0, 2).map((fact, i) => (
+                <li key={i} className="flex items-center gap-1.5 text-[10px] text-on-surface-variant/50 font-light">
                   <span className="size-1 rounded-full bg-primary/60 shrink-0" />
                   {fact}
                 </li>

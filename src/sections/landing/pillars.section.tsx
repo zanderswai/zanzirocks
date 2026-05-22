@@ -238,9 +238,9 @@ export default function PillarsSection() {
 
                   {/* Highlights */}
                   <ul className="flex flex-col gap-2 mb-8">
-                    {dest.highlights.map((h) => (
+                    {dest.highlights.map((h, i) => (
                       <li
-                        key={h}
+                        key={i}
                         className="flex items-center gap-2.5 text-[11px] text-white/60 uppercase tracking-widest font-label font-bold"
                       >
                         <span className="size-1.5 rounded-full bg-primary shrink-0" />

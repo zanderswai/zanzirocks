@@ -78,8 +78,8 @@ export default function TarangireElephantsSection() {
         </div>
 
         <div className="grid grid-cols-12 gap-1.5">
-          {MONTHS.map((m) => (
-            <div key={m.short} className="flex flex-col items-center gap-2">
+          {MONTHS.map((m, i) => (
+            <div key={i} className="flex flex-col items-center gap-2">
               <div
                 className={cn(
                   "w-full rounded-lg py-6 flex items-center justify-center transition-all duration-200",

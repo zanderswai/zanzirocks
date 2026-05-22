@@ -132,7 +132,7 @@ export default function SerengetiPredatorsSection() {
 
       <div className="flex flex-col gap-6">
         {CATS.map((cat, i) => (
-          <CatCard key={cat.name} cat={cat} reversed={i % 2 !== 0} />
+          <CatCard key={i} cat={cat} reversed={i % 2 !== 0} />
         ))}
       </div>
 

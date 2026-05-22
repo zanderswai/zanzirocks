@@ -46,8 +46,8 @@ export default function SerengetiNgorongoroBookingSection() {
           <div>
             <p className="font-label text-[9px] uppercase tracking-widest text-on-surface-variant/40 mb-5">Included</p>
             <ul className="flex flex-col gap-3">
-              {INCLUDES.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm text-on-surface-variant font-light">
+              {INCLUDES.map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-sm text-on-surface-variant font-light">
                   <RiCheckLine className="size-4 text-emerald-400 shrink-0 mt-0.5" />
                   {item}
                 </li>
@@ -57,8 +57,8 @@ export default function SerengetiNgorongoroBookingSection() {
           <div>
             <p className="font-label text-[9px] uppercase tracking-widest text-on-surface-variant/40 mb-5">Not Included</p>
             <ul className="flex flex-col gap-3">
-              {EXCLUDES.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm text-on-surface-variant/50 font-light">
+              {EXCLUDES.map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-sm text-on-surface-variant/50 font-light">
                   <RiCloseLine className="size-4 text-on-surface-variant/30 shrink-0 mt-0.5" />
                   {item}
                 </li>
@@ -85,8 +85,8 @@ export default function SerengetiNgorongoroBookingSection() {
               { label: "Departure", value: "Zanzibar" },
               { label: "Group size", value: "2 – 10 guests" },
               { label: "Best for migration", value: "July – September" },
-            ].map((item) => (
-              <div key={item.label}>
+            ].map((item, i) => (
+              <div key={i}>
                 <p className="font-label text-[8px] uppercase tracking-widest text-on-surface-variant/40 mb-0.5">{item.label}</p>
                 <p className="font-label text-[11px] text-on-surface font-semibold">{item.value}</p>
               </div>

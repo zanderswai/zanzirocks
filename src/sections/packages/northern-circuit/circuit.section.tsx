@@ -76,7 +76,7 @@ export default function NorthernCircuitSection() {
       {/* Route progression indicator */}
       <div className="relative mb-10 hidden md:flex items-center gap-0">
         {STOPS.map((stop, i) => (
-          <div key={stop.name} className="flex items-center flex-1">
+          <div key={i} className="flex items-center flex-1">
             <div className="flex flex-col items-center gap-1.5 w-full">
               <div className={cn(
                 "w-3 h-3 rounded-full border-2 border-primary",
@@ -98,9 +98,9 @@ export default function NorthernCircuitSection() {
 
       {/* Destination cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {STOPS.map((stop) => (
+        {STOPS.map((stop, i) => (
           <Link
-            key={stop.name}
+            key={i}
             to={`/${stop.slug}`}
             className="group relative block rounded-2xl overflow-hidden h-[380px]"
           >
@@ -123,8 +123,8 @@ export default function NorthernCircuitSection() {
               <p className="text-white/55 text-xs font-light leading-snug">{stop.headline}</p>
               <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500">
                 <ul className="overflow-hidden flex flex-col gap-1.5 pt-2">
-                  {stop.keyFacts.map((fact) => (
-                    <li key={fact} className="flex items-start gap-2 text-[11px] text-white/55 font-light">
+                  {stop.keyFacts.map((fact, i) => (
+                    <li key={i} className="flex items-start gap-2 text-[11px] text-white/55 font-light">
                       <span className="mt-[3px] size-1.5 rounded-full bg-primary shrink-0" />
                       {fact}
                     </li>

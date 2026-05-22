@@ -79,12 +79,12 @@ export default function SerengetiMigrationSection() {
 
       {/* Month bar calendar — clickable */}
       <div className="grid grid-cols-6 md:grid-cols-12 gap-2 mb-10">
-        {MONTHS.map((m) => {
+        {MONTHS.map((m, i) => {
           const isActive = m.phase === activePhase;
           const meta = PHASE_META[m.phase];
           return (
             <button
-              key={m.month}
+              key={i}
               onClick={() => setActivePhase(m.phase)}
               className={cn(
                 "flex flex-col items-center gap-2 group",
@@ -125,9 +125,9 @@ export default function SerengetiMigrationSection() {
               {active.label}
             </h3>
             <div className="flex flex-wrap gap-1.5 mt-2">
-              {MONTHS.filter((m) => m.phase === activePhase).map((m) => (
+              {MONTHS.filter((m) => m.phase === activePhase).map((m, i) => (
                 <span
-                  key={m.month}
+                  key={i}
                   className="font-label text-[9px] border border-outline-variant/20 text-on-surface-variant/60 rounded-full px-2 py-0.5"
                 >
                   {m.short}

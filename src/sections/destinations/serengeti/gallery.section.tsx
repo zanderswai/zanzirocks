@@ -224,8 +224,8 @@ export default function SerengetiGallerySection() {
           { value: "4.9★", label: "Average guest rating" },
           { value: "30,000 km²", label: "Of pure wilderness" },
           { value: "Year-round", label: "Wildlife viewing" },
-        ].map((stat) => (
-          <div key={stat.label} className="bg-surface-container px-6 py-5 flex flex-col gap-1">
+        ].map((stat, i) => (
+          <div key={i} className="bg-surface-container px-6 py-5 flex flex-col gap-1">
             <span className="font-headline text-2xl text-primary">{stat.value}</span>
             <span className="font-label text-[9px] uppercase tracking-widest text-on-surface-variant/50">{stat.label}</span>
           </div>
