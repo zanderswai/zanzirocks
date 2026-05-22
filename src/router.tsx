@@ -3,6 +3,7 @@ import MainLayout from "@/layouts/main";
 import LandingPage from "@/sections/pages/landing.page";
 import NotFoundPage from "@/sections/pages/not-found.page";
 import ErrorPage from "@/sections/pages/error.page";
+import DestinationsPage from "@/sections/pages/destinations.page";
 import ZanzibarPage from "@/sections/pages/destinations/zanzibar.page";
 import NyererePage from "@/sections/pages/destinations/nyerere.page";
 import MafiaPage from "@/sections/pages/destinations/mafia.page";
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <LandingPage /> },
+      { path: "destinations", element: <DestinationsPage /> },
       { path: "destinations/zanzibar", element: <ZanzibarPage /> },
       { path: "destinations/nyerere", element: <NyererePage /> },
       { path: "destinations/mafia", element: <MafiaPage /> },
