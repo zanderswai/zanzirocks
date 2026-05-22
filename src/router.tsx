@@ -3,6 +3,7 @@ import MainLayout from "@/layouts/main";
 import LandingPage from "@/sections/pages/landing.page";
 import NotFoundPage from "@/sections/pages/not-found.page";
 import ErrorPage from "@/sections/pages/error.page";
+import AboutPage from "@/sections/pages/about/page";
 import DestinationsPage from "@/sections/pages/destinations.page";
 import PackagesPage from "@/sections/pages/packages.page";
 import MafiaWhaleSharkPage from "@/sections/pages/packages/mafia-island-whale-shark-adventure-day-trip.page";
@@ -16,6 +17,7 @@ import MafiaPage from "@/sections/pages/destinations/mafia.page";
 import NgorongoroPage from "@/sections/pages/destinations/ngorongoro.page";
 import SerengetiPage from "@/sections/pages/destinations/serengeti.page";
 import TarangirePage from "@/sections/pages/destinations/tarangire.page";
+import ContactPage from "@/sections/pages/contact/page";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <LandingPage /> },
+      { path: "about", element: <AboutPage /> },
       { path: "destinations", element: <DestinationsPage /> },
       { path: "packages", element: <PackagesPage /> },
       { path: "packages/mafia-island-whale-shark-adventure-day-trip", element: <MafiaWhaleSharkPage /> },
@@ -37,6 +40,7 @@ const router = createBrowserRouter([
       { path: "destinations/ngorongoro", element: <NgorongoroPage /> },
       { path: "destinations/serengeti", element: <SerengetiPage /> },
       { path: "destinations/tarangire", element: <TarangirePage /> },
+      { path: "contact", element: <ContactPage /> },
     ],
   },
   {
