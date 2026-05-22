@@ -77,7 +77,7 @@ const destinations: MapDest[] = [
     heroTag: "Swim With Giants",
     type: "island",
     coords: [-7.9, 39.85],
-    href: "/destinations/mafia-island",
+    href: "/destinations/mafia",
   },
   {
     id: "arusha",

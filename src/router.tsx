@@ -4,6 +4,12 @@ import LandingPage from "@/sections/pages/landing.page";
 import NotFoundPage from "@/sections/pages/not-found.page";
 import ErrorPage from "@/sections/pages/error.page";
 import DestinationsPage from "@/sections/pages/destinations.page";
+import PackagesPage from "@/sections/pages/packages.page";
+import MafiaWhaleSharkPage from "@/sections/pages/packages/mafia-island-whale-shark-adventure-day-trip.page";
+import NorthernCircuitPage from "@/sections/pages/packages/northern-circuit-4-days-tarangire-serengeti-ngorongoro.page";
+import NyerereFlySafariPage from "@/sections/pages/packages/nyerere-fly-in-safari-3-days.page";
+import SerengetiNgorongoroPage from "@/sections/pages/packages/serengeti-ngorongoro-safari-3-days.page";
+import GrandSafariPage from "@/sections/pages/packages/grand-safari-zanzibar-6-days.page";
 import ZanzibarPage from "@/sections/pages/destinations/zanzibar.page";
 import NyererePage from "@/sections/pages/destinations/nyerere.page";
 import MafiaPage from "@/sections/pages/destinations/mafia.page";
@@ -19,6 +25,12 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <LandingPage /> },
       { path: "destinations", element: <DestinationsPage /> },
+      { path: "packages", element: <PackagesPage /> },
+      { path: "packages/mafia-island-whale-shark-adventure-day-trip", element: <MafiaWhaleSharkPage /> },
+      { path: "packages/northern-circuit-4-days-tarangire-serengeti-ngorongoro", element: <NorthernCircuitPage /> },
+      { path: "packages/nyerere-fly-in-safari-3-days", element: <NyerereFlySafariPage /> },
+      { path: "packages/serengeti-ngorongoro-safari-3-days", element: <SerengetiNgorongoroPage /> },
+      { path: "packages/grand-safari-zanzibar-6-days", element: <GrandSafariPage /> },
       { path: "destinations/zanzibar", element: <ZanzibarPage /> },
       { path: "destinations/nyerere", element: <NyererePage /> },
       { path: "destinations/mafia", element: <MafiaPage /> },

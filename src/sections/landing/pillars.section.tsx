@@ -136,7 +136,7 @@ const destinations: Destination[] = [
       "Pristine coral reefs & marine reserve",
       "Shore BBQ lunch + Kilindoni city tour",
     ],
-    href: "/destinations/mafia-island",
+    href: "/destinations/mafia",
     type: "island",
     image:
       "https://plus.unsplash.com/premium_photo-1670349272577-58ee4aad079b?q=80&w=2574&auto=format&fit=crop",
