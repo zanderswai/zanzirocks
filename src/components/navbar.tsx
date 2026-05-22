@@ -102,7 +102,7 @@ const destinationItems = [
   {
     label: "Mafia Island",
     desc: "Swim With Giants",
-    href: "/destinations/mafia-island",
+    href: "/destinations/mafia",
     image:
       "https://plus.unsplash.com/premium_photo-1670349272577-58ee4aad079b?q=80&w=400&auto=format&fit=crop",
   },
@@ -334,7 +334,10 @@ export default function Navbar() {
                 <RiMenuLine />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-surface-dim border-outline-variant/20 w-72">
+            <SheetContent
+              side="right"
+              className="bg-surface-dim border-outline-variant/20 w-72"
+            >
               <SheetTitle className="text-primary font-headline text-2xl">
                 ZanziRocks
               </SheetTitle>
