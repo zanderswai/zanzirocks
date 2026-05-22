@@ -38,7 +38,7 @@ export default function Footer() {
             variant="outline"
             className="border-white/15 bg-white/5 text-white hover:bg-white/10 hover:text-white font-bold uppercase tracking-widest text-[10px] px-5 gap-2 backdrop-blur-sm"
           >
-            <a href="https://wa.me/255777415192" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/+255750908776" target="_blank" rel="noopener noreferrer">
               <RiWhatsappLine data-icon="inline-start" />
               WhatsApp
             </a>
@@ -83,9 +83,22 @@ export default function Footer() {
 
         <Separator className="bg-outline-variant/10" />
 
-        <p className="mt-6 font-body text-[10px] text-outline uppercase tracking-widest text-center">
-          Wonderful Zanzibar Tours &amp; Safaris · Stone Town, Zanzibar, Tanzania
-        </p>
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="font-body text-[10px] text-outline uppercase tracking-widest">
+            Wonderful Zanzibar Tours &amp; Safaris · Stone Town, Zanzibar, Tanzania
+          </p>
+          <p className="font-body text-[10px] text-outline/50 uppercase tracking-widest shrink-0">
+            Digital architecture by{" "}
+            <a
+              href="https://underscor.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-outline hover:text-primary/60 transition-colors duration-200"
+            >
+              Underscor
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );

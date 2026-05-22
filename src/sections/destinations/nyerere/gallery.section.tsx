@@ -82,8 +82,8 @@ const ITEMS: GalleryItem[] = [
   {
     id: "n5",
     category: "river",
-    image: "https://images.unsplash.com/photo-1470770903676-69b98f9a2a8b?q=80&w=1200&auto=format&fit=crop",
-    alt: "Rufiji River sunset reflections",
+    image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1200&auto=format&fit=crop",
+    alt: "Rufiji River at dusk — last light over the water",
     aspect: "portrait",
   },
   {

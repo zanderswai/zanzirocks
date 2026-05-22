@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { RiInstagramLine, RiLinkedinBoxFill, RiWhatsappLine, RiArrowRightLine } from "@remixicon/react";
+import {
+  RiInstagramLine,
+  RiLinkedinBoxFill,
+  RiWhatsappLine,
+  RiArrowRightLine,
+} from "@remixicon/react";
 
 const PREVIEW_IMAGES = [
   "https://images.unsplash.com/photo-1644968519459-884c0c8b47d4?q=80&w=400&auto=format&fit=crop",
@@ -72,7 +77,9 @@ export default function AboutSocialSection() {
             </p>
             <h3 className="font-headline text-3xl md:text-4xl leading-tight mb-3">
               Tanzania looks better{" "}
-              <span className="italic text-primary">when you're following along.</span>
+              <span className="italic text-primary">
+                when you're following along.
+              </span>
             </h3>
             <p className="text-on-surface-variant text-sm font-light max-w-md leading-relaxed">
               Behind-the-scenes from the parks, honest travel advice, and the
@@ -84,14 +91,15 @@ export default function AboutSocialSection() {
           <div className="flex flex-col gap-3 shrink-0 min-w-[220px]">
             {SOCIALS.map((social, i) => {
               const Icon = social.icon;
-              const linkProps = social.internal
-                ? { as: Link, to: social.href }
-                : { href: social.href, target: "_blank", rel: "noopener noreferrer" };
 
               const Wrapper = social.internal ? Link : "a";
               const wrapperProps = social.internal
                 ? { to: social.href }
-                : { href: social.href, target: "_blank", rel: "noopener noreferrer" };
+                : {
+                    href: social.href,
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  };
 
               return (
                 <Wrapper
@@ -104,7 +112,9 @@ export default function AboutSocialSection() {
                     <p className="font-label text-[10px] uppercase tracking-widest text-on-surface font-bold truncate">
                       {social.label}
                     </p>
-                    <p className="font-label text-[9px] text-on-surface-variant/40 truncate">{social.handle}</p>
+                    <p className="font-label text-[9px] text-on-surface-variant/40 truncate">
+                      {social.handle}
+                    </p>
                   </div>
                   <RiArrowRightLine className="size-3.5 text-on-surface-variant/20 group-hover/s:text-primary transition-colors shrink-0" />
                 </Wrapper>

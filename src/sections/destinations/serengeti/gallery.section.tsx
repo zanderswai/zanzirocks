@@ -73,8 +73,8 @@ const ITEMS: GalleryItem[] = [
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1672660534079-5aa7d27d55e6?q=80&w=900&auto=format&fit=crop",
-    alt: "Wildebeest migration dust cloud at sunset",
+    src: "https://images.unsplash.com/photo-1508768787810-6adc1f613514?q=80&w=900&auto=format&fit=crop",
+    alt: "Wildebeest migration across the open Serengeti plains",
     filter: "migration",
   },
   {

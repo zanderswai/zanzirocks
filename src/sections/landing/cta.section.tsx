@@ -36,7 +36,7 @@ export default function CTASection() {
             variant="outline"
             className="border-white/20 bg-white/10 backdrop-blur-md text-white hover:bg-white/20 hover:text-white px-12 py-5 h-auto font-bold text-sm tracking-widest uppercase gap-2"
           >
-            <a href="https://wa.me/255777415192" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/+255750908776" target="_blank" rel="noopener noreferrer">
               <RiWhatsappLine data-icon="inline-start" />
               WhatsApp Our Team
             </a>

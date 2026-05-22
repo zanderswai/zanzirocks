@@ -18,6 +18,7 @@ import NgorongoroPage from "@/sections/pages/destinations/ngorongoro.page";
 import SerengetiPage from "@/sections/pages/destinations/serengeti.page";
 import TarangirePage from "@/sections/pages/destinations/tarangire.page";
 import ContactPage from "@/sections/pages/contact/page";
+import BlogPage from "@/sections/pages/blog.page";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,7 @@ const router = createBrowserRouter([
       { path: "destinations/serengeti", element: <SerengetiPage /> },
       { path: "destinations/tarangire", element: <TarangirePage /> },
       { path: "contact", element: <ContactPage /> },
+      { path: "blog", element: <BlogPage /> },
     ],
   },
   {

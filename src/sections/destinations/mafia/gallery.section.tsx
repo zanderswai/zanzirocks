@@ -36,8 +36,8 @@ const ITEMS: GalleryItem[] = [
   },
   {
     id: "m5", category: "encounter",
-    image: "https://images.unsplash.com/photo-1559213888-c0b67fefdb27?q=80&w=1200&auto=format&fit=crop",
-    alt: "Manta ray gliding through ocean Mafia", aspect: "portrait",
+    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1200&auto=format&fit=crop",
+    alt: "Underwater ocean encounter Mafia Island", aspect: "portrait",
   },
   {
     id: "m6", category: "island",

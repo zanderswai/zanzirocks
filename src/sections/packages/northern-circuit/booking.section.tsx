@@ -110,10 +110,10 @@ export default function NorthernCircuitBookingSection() {
               variant="outline"
               className="w-full border-outline-variant/30 text-on-surface-variant hover:bg-surface-container-high font-label uppercase tracking-widest text-xs gap-2"
             >
-              <Link to="/contact">
+              <a href="https://wa.me/+255750908776" target="_blank" rel="noopener noreferrer">
                 <RiWhatsappLine className="size-3.5 text-emerald-400" />
                 WhatsApp Us
-              </Link>
+              </a>
             </Button>
           </div>
 

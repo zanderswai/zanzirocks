@@ -53,7 +53,7 @@ export default function NotFoundPage() {
             className="border-white/20 bg-white/10 backdrop-blur-md text-white hover:bg-white/20 hover:text-white font-bold uppercase tracking-widest text-xs px-8 gap-2"
           >
             <a
-              href="https://wa.me/255777415192"
+              href="https://wa.me/+255750908776"
               target="_blank"
               rel="noopener noreferrer"
             >

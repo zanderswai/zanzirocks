@@ -122,10 +122,10 @@ export default function GrandSafariBookingSection() {
               variant="outline"
               className="w-full border-primary/30 text-primary hover:bg-primary/8 font-label uppercase tracking-widest text-xs gap-2"
             >
-              <Link to="/contact">
+              <a href="https://wa.me/+255750908776" target="_blank" rel="noopener noreferrer">
                 <RiWhatsappLine className="size-3.5 text-emerald-400" />
                 WhatsApp Us
-              </Link>
+              </a>
             </Button>
           </div>
 

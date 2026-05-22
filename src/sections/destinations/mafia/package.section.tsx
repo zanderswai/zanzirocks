@@ -113,7 +113,7 @@ export default function MafiaPackageSection() {
               variant="outline"
               className="w-full border-outline-variant/30 text-on-surface-variant hover:border-primary/40 hover:text-primary gap-2 font-label uppercase tracking-widest text-[10px]"
             >
-              <a href="https://wa.me/255777415192" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/+255750908776" target="_blank" rel="noopener noreferrer">
                 <RiWhatsappLine className="size-4" />
                 WhatsApp Our Team
               </a>
