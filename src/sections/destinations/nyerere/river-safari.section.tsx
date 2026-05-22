@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import {
-  RiBoatLine,
+  RiSailboatLine,
   RiWalkLine,
   RiCameraLine,
   RiTeamLine,
@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const ACTIVITIES = [
   {
-    icon: RiBoatLine,
+    icon: RiSailboatLine,
     title: "Rufiji River Boat Safari",
     desc: "Two hours drifting through channels and lagoons — hippos surface metres away, crocodiles bask on sandy banks, and the sky erupts with bee-eaters and kingfishers.",
     duration: "2 hrs",
@@ -42,7 +42,6 @@ export default function NyerereRiverSafariSection() {
     <section className="mb-32 md:mb-48">
       {/* Full-bleed split panel */}
       <div className="rounded-xl overflow-hidden border border-outline-variant/10 grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
-
         {/* ── Left: image ── */}
         <div className="relative min-h-[360px] lg:min-h-0">
           <img
@@ -56,7 +55,9 @@ export default function NyerereRiverSafariSection() {
           {/* Floating badge */}
           <div className="absolute bottom-6 left-6">
             <div className="flex flex-col gap-1 bg-black/50 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-4">
-              <span className="font-headline text-3xl text-primary leading-none">Rufiji</span>
+              <span className="font-headline text-3xl text-primary leading-none">
+                Rufiji
+              </span>
               <span className="font-label text-[10px] uppercase tracking-widest text-white/50">
                 Tanzania's longest river
               </span>
@@ -92,9 +93,13 @@ export default function NyerereRiverSafariSection() {
                     <h3 className="font-label text-[13px] font-bold text-white uppercase tracking-wide">
                       {title}
                     </h3>
-                    <span className="font-label text-[10px] text-primary/60 shrink-0">{duration}</span>
+                    <span className="font-label text-[10px] text-primary/60 shrink-0">
+                      {duration}
+                    </span>
                   </div>
-                  <p className="text-on-surface-variant text-sm font-light leading-relaxed">{desc}</p>
+                  <p className="text-on-surface-variant text-sm font-light leading-relaxed">
+                    {desc}
+                  </p>
                 </div>
               </div>
             ))}
